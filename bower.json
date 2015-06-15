@@ -1,0 +1,24 @@
+{
+  "name": "wct2015",
+  "version": "0.0.1",
+  "authors": [
+    "featherplain <info@featherplain.com>"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "*"
+  },
+  "exportsOverride": {
+    "foundation": {
+      "scss": "scss",
+      "js": "js"
+    }
+  }
+}

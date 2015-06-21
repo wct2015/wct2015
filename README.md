@@ -1,4 +1,6 @@
 # Development of wct2015
+[![Deployment status from dploy.io](https://wct2015.dploy.io/badge/23779029990525/35238.svg)](http://dploy.io)
+
 WordPress development for WordCamp Tokyo 2015 using
 
 - gulp

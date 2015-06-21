@@ -22,7 +22,7 @@ WordPress development for WordCamp Tokyo 2015 using
 
         $ git clone git@github.com:featherplain/wct2015.git wct2015
         
-1. Copy files in `plugins/` directory to your WordPress `plugins/` directory.
+1. Copy files in `src/plugins/` directory to your WordPress `plugins/` directory.
 1. Install some dependencies.
 
 

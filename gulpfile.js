@@ -20,7 +20,7 @@ var paths = {
 // html
   'htmlDest'       : 'src/html/',
 // images
-  'imageDest'      : 'dist/images/',
+  'imageDest'      : 'files/',
   'imagePath'      : 'src/images/',
 // jade
   'jadePath'       : 'src/jade/',
@@ -72,12 +72,12 @@ gulp.task('bs-reload', function() {
 * image tasks
 ***************************************************************************/
 
-// gulp.task('image-min', function() {
-//   return gulp.src(paths.imageDest + 'files/**/*.*')
-//     .pipe($.imagemin({ optimizationLevel: 3 }))
-//     .pipe(gulp.dest(paths.imageDest + 'pages/'))
-//     .pipe(browserSync.reload({ stream: true }));
-// });
+gulp.task('image-min', function() {
+  return gulp.src(paths.imageDest + '**/*.*')
+    .pipe($.imagemin({ optimizationLevel: 3 }))
+    .pipe(gulp.dest(paths.imageDest))
+    .pipe(browserSync.reload({ stream: true }));
+});
 
 // gulp.task('sprite', function() {
 //   var spriteData = gulp.src(paths.imagePath + 'sprite/*.png')
@@ -152,8 +152,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', [
   'browser-sync',
-  'bs-reload',
-  // 'image-min',
+  'image-min',
   'jade',
   'sass',
   // 'sprite',

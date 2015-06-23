@@ -4,11 +4,12 @@
 WordPress development for WordCamp Tokyo 2015 using
 
 - gulp
-- BrowerSync
+- BrowserSync
 - foundation
 
 ## Requires
 
+- gulp
 - Bower
 - Node.js
 - npm
@@ -37,39 +38,35 @@ WordPress development for WordCamp Tokyo 2015 using
         
 1. Run gulp.
 
-
+        // proxy mode
         $ gulp
+
+        // server mode for static websites
+        $ npm run gulp-server
         
 ### BrowserSync
 
-If you want to avoid proxy mode, uncomment below "// Static server" lines.
+Default is proxy mode.
 
 ```javascript
-// Local server
 gulp.task('browser-sync', function() {
-  browserSync({
-    proxy: paths.vhost,
-    open: 'external'
-  });
-});
+  var args = {};
+  if (argv.mode == 'server' ) {
+    args.server =  { baseDir: paths.root };
+    args.startPath = paths.htmlDest;
+  } else {
+    args.proxy =  paths.vhost;
+    args.open = 'external';
+  };
+  browserSync.init(args);
+})
 
-// Static server
-// gulp.task('browser-sync', function() {
-//  browserSync({
-//    server: {
-//      baseDir: paths.root
-//    },
-//    startPath: paths.htmlDest
-//  });
-// });
-
-// Reload all browsers
 gulp.task('bs-reload', function() {
   browserSync.reload()
 });
 ```
 
-## foundation
+### foundation
 
 ```
 src/scss/core/_settings.scss

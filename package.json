@@ -1,17 +1,18 @@
 {
   "name": "wct2015",
   "version": "0.0.1",
-  "description": "WordPress child theme for WordCamp Tokyo 2015",
+  "description": "WordPress theme based on wcbs for WordCamp Tokyo 2015",
   "uri": "https://github.com/featherplain/wct2015/",
   "main": "gulpfile.js",
   "scripts": {
     "gulp-init": "bower install; gulp init",
+    "gulp-server": "gulp default --mode server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Megumi Hano",
   "license": "",
   "devDependencies": {
-    "browser-sync": "latest",
+    "browser-sync": "^2.7.12",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
@@ -32,6 +33,7 @@
     "gulp-uglify": "latest",
     "gulp.spritesmith": "latest",
     "main-bower-files": "latest",
-    "run-sequence": "^1.1.0"
+    "run-sequence": "^1.1.0",
+    "yargs": "^3.12.0"
   }
 }

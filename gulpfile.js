@@ -4,10 +4,9 @@
 
 var gulp           = require('gulp'),
     $              = require('gulp-load-plugins')({ pattern: ['gulp-*', 'gulp.*'], replaceString: /\bgulp[\-.]/}),
+    argv           = require('yargs').argv,
     browserSync    = require('browser-sync'),
-    // mainBowerFiles = require('main-bower-files'),
     runSequence    = require('run-sequence')
-//  saveLicense = require('uglify-save-license')
 ;
 
 /***************************************************************************
@@ -21,13 +20,10 @@ var paths = {
 // html
   'htmlDest'       : 'src/html/',
 // images
-  'imageDest'      : 'dist/images/',
+  'imageDest'      : 'files/',
   'imagePath'      : 'src/images/',
 // jade
   'jadePath'       : 'src/jade/',
-// JavaScript
-  'jsPath'         : 'src/js/',
-  'jsDest'         : 'dist/js/',
 // scss
   'scssPath'       : 'src/scss/',
 // css
@@ -44,6 +40,7 @@ var rubySassConf = {
 /***************************************************************************
  * initializing bower_components
 **************************************************************************/
+
 gulp.task('bower:install', $.shell.task(['bower install']));
 
 gulp.task('install:foundation', function() {
@@ -55,25 +52,18 @@ gulp.task('install:foundation', function() {
 * BrowserSync
 ***************************************************************************/
 
-// Local server
 gulp.task('browser-sync', function() {
-  browserSync({
-    proxy: paths.vhost,
-    open: 'external'
-  });
-});
+  var args = {};
+  if (argv.mode == 'server' ) {
+    args.server =  { baseDir: paths.root };
+    args.startPath = paths.htmlDest;
+  } else {
+    args.proxy =  paths.vhost;
+    args.open = 'external';
+  };
+  browserSync.init(args);
+})
 
-// Static server
-// gulp.task('browser-sync', function() {
-//  browserSync({
-//    server: {
-//      baseDir: paths.root
-//    },
-//    startPath: paths.htmlDest
-//  });
-// });
-
-// Reload all browsers
 gulp.task('bs-reload', function() {
   browserSync.reload()
 });
@@ -82,12 +72,12 @@ gulp.task('bs-reload', function() {
 * image tasks
 ***************************************************************************/
 
-// gulp.task('image-min', function() {
-//   return gulp.src(paths.imageDest + 'files/**/*.*')
-//     .pipe($.imagemin({ optimizationLevel: 3 }))
-//     .pipe(gulp.dest(paths.imageDest + 'pages/'))
-//     .pipe(browserSync.reload({ stream: true }));
-// });
+gulp.task('image-min', function() {
+  return gulp.src(paths.imageDest + '**/*.*')
+    .pipe($.imagemin({ optimizationLevel: 3 }))
+    .pipe(gulp.dest(paths.imageDest))
+    .pipe(browserSync.reload({ stream: true }));
+});
 
 // gulp.task('sprite', function() {
 //   var spriteData = gulp.src(paths.imagePath + 'sprite/*.png')
@@ -132,33 +122,6 @@ gulp.task('jade', function() {
 });
 
 /***************************************************************************
-* js tasks
-***************************************************************************/
-
-// gulp.task('jsLib', function() {
-//   return gulp.src(paths.jsPath + 'lib/*.js')
-//     .pipe($.concat('lib.js'))
-//     .pipe($.uglify())
-//     .pipe($.rename({ suffix: '.min' }))
-//     .pipe(gulp.dest(paths.jsDest))
-//     .pipe(browserSync.reload({ stream: true }));
-// });
-
-// gulp.task('jsApp', function() {
-//   return gulp.src(paths.jsPath + 'app/*.js')
-//     .pipe($.concat('script.js'))
-//     .pipe($.uglify())
-//     .pipe($.rename({ suffix: '.min' }))
-//     .pipe(gulp.dest(paths.jsDest))
-//     .pipe(browserSync.reload({ stream: true }));
-// });
-
-// gulp.task('jsTasks', [
-//   'jsApp',
-//   'jsLib'
-// ]);
-
-/***************************************************************************
 * Sass tasks
 ***************************************************************************/
 
@@ -184,26 +147,18 @@ gulp.task('watch', function() {
   // gulp.watch([paths.imagePath + 'sprite-svg/*.svg'], ['sprite-svg'])
   gulp.watch([paths.htmlDest  + '*.html'], ['bs-reload']);
   gulp.watch([paths.jadePath  + '**/*.jade'], ['jade']);
-  // gulp.watch([paths.jsPath    + '**/*.js'], ['jsTasks']);
   gulp.watch([paths.scssPath  + '**/*.scss'], ['sass']);
 });
 
 gulp.task('default', [
   'browser-sync',
-  'bs-reload',
-  // 'image-min',
+  'image-min',
   'jade',
-  // 'jsTasks',
   'sass',
   // 'sprite',
   // 'sprite-svg',
   'watch'
 ]);
-
-// gulp.task('init', [
-//   'bower-init',
-//   // 'jsTasks'
-// ]);
 
 gulp.task('init', function(cb) {
   runSequence('bower:install', 'install:foundation', cb);

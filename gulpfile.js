@@ -4,10 +4,9 @@
 
 var gulp           = require('gulp'),
     $              = require('gulp-load-plugins')({ pattern: ['gulp-*', 'gulp.*'], replaceString: /\bgulp[\-.]/}),
+    argv           = require('yargs').argv,
     browserSync    = require('browser-sync'),
-    // mainBowerFiles = require('main-bower-files'),
     runSequence    = require('run-sequence')
-//  saveLicense = require('uglify-save-license')
 ;
 
 /***************************************************************************
@@ -55,25 +54,18 @@ gulp.task('install:foundation', function() {
 * BrowserSync
 ***************************************************************************/
 
-// Local server
 gulp.task('browser-sync', function() {
-  browserSync({
-    proxy: paths.vhost,
-    open: 'external'
-  });
-});
+  var args = {};
+  if (argv.mode == 'server' ) {
+    args.server =  { baseDir: paths.root };
+    args.startPath = paths.htmlDest;
+  } else {
+    args.proxy =  paths.vhost;
+    args.open = 'external';
+  };
+  browserSync.init(args);
+})
 
-// Static server
-// gulp.task('browser-sync', function() {
-//  browserSync({
-//    server: {
-//      baseDir: paths.root
-//    },
-//    startPath: paths.htmlDest
-//  });
-// });
-
-// Reload all browsers
 gulp.task('bs-reload', function() {
   browserSync.reload()
 });

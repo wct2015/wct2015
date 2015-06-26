@@ -9,7 +9,7 @@ html {
 body {
   background-color: #fff;
   background-repeat: no-repeat;
-  color: $colorBase;
+  color: $colorText;
   word-wrap: break-word;
   font-family: $fontFamily;
   font-weight: 300;
@@ -24,6 +24,7 @@ iframe {
 a {
   color: $colorLink;
   text-decoration: none;
+  transition: 0.3s all;
   &:focus {
     outline: thin dotted;
   }
@@ -41,7 +42,7 @@ a {
 }
 p {
   margin-bottom: 1.125em;
-  color: $colorBase;
+  color: $colorText;
   &:last-child{
     margin-bottom: 0;
   }
@@ -50,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $fontFamily;
   &,
   & > a {
-    color: $colorBase;
+    color: $colorText;
     &:hover {
       text-decoration: none;
     }
@@ -59,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 ::selection {
   background: transparent;
   background-color: $colorSelection;
-  color: $colorBase;
+  color: $colorText;
 }
 .fa {
   display: inline-block;

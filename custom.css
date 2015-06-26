@@ -1,6 +1,125 @@
+@charset "UTF-8";
 /*
- * wct2015 custom css
+ * tokyo.wordcamp.org/2015/
+ * custom css
  */
+/* default styles
+/* ---------------------------------------- */
+/* the root element */
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  color: #333333;
+  word-wrap: break-word;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
+  font-weight: 300;
+}
+
+/* grouping content */
+iframe {
+  vertical-align: middle;
+}
+
+/* text-level semantics */
+a {
+  color: #52a9cf;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:link, a:visited {
+  color: #52a9cf;
+}
+a:hover, a:active, a:focus {
+  outline: 0;
+  color: #8ec7e0;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1.125em;
+  color: #333333;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
+}
+h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a {
+  color: #333333;
+}
+h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover, h4 > a:hover, h5:hover, h5 > a:hover, h6:hover, h6 > a:hover {
+  text-decoration: none;
+}
+
+::-moz-selection {
+  background: transparent;
+  background-color: #52a9cf;
+  color: #333333;
+}
+
+::selection {
+  background: transparent;
+  background-color: #52a9cf;
+  color: #333333;
+}
+
+.fa {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.fontEn {
+  font-family: "Helvetica Neue", "Helvetica", Sans-Serif;
+}
+
+/* list items */
+ul li {
+  list-style-type: none;
+}
+
+dl {
+  margin-bottom: 2em;
+}
+dl:last-child {
+  margin-bottom: 0;
+}
+dl dt {
+  margin-bottom: 1em;
+}
+dl dd {
+  margin-bottom: 1em;
+}
+dl dd:last-child {
+  margin-bottom: 0;
+}
+
+/* embedded content */
+img {
+  line-height: 1.0;
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* table */
+table {
+  font: 100%;
+  font-size: inherit;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
 /* columns */
 /* Table */
 /* clearfix */
@@ -78,9 +197,9 @@ body {
 
 body {
   background: #fff;
-  color: #222;
+  color: #333333;
   cursor: auto;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -159,7 +278,7 @@ select {
 
 .row {
   margin: 0 auto;
-  max-width: 62.5rem;
+  max-width: 1040px;
   width: 100%;
 }
 .row:before, .row:after {
@@ -1441,7 +1560,7 @@ select {
   background: #EFEFEF;
   color: #222222;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-size: 1rem;
   padding: 1rem;
 }
@@ -2012,7 +2131,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -4294,7 +4413,7 @@ kbd {
 
 .label {
   display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-weight: normal;
   line-height: 1;
   margin-bottom: auto;
@@ -4770,7 +4889,7 @@ ul.pagination li {
 .pricing-table .title {
   background-color: #333333;
   color: #EEEEEE;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-size: 1rem;
   font-weight: normal;
   padding: 0.9375rem 1.25rem;
@@ -4779,7 +4898,7 @@ ul.pagination li {
 .pricing-table .price {
   background-color: #F6F6F6;
   color: #333333;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-size: 2rem;
   font-weight: normal;
   padding: 0.9375rem 1.25rem;
@@ -4993,7 +5112,7 @@ ul.pagination li {
   .reveal-modal {
     left: 0;
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 1040px;
     right: 0;
     width: 80%;
   }
@@ -5016,7 +5135,7 @@ ul.pagination li {
   .reveal-modal.tiny {
     left: 0;
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 1040px;
     right: 0;
     width: 30%;
   }
@@ -5025,7 +5144,7 @@ ul.pagination li {
   .reveal-modal.small {
     left: 0;
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 1040px;
     right: 0;
     width: 40%;
   }
@@ -5034,7 +5153,7 @@ ul.pagination li {
   .reveal-modal.medium {
     left: 0;
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 1040px;
     right: 0;
     width: 60%;
   }
@@ -5043,7 +5162,7 @@ ul.pagination li {
   .reveal-modal.large {
     left: 0;
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 1040px;
     right: 0;
     width: 70%;
   }
@@ -5052,7 +5171,7 @@ ul.pagination li {
   .reveal-modal.xlarge {
     left: 0;
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 1040px;
     right: 0;
     width: 95%;
   }
@@ -5070,7 +5189,7 @@ ul.pagination li {
   .reveal-modal.full {
     left: 0;
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 1040px;
     right: 0;
     width: 100%;
   }
@@ -5091,7 +5210,7 @@ ul.pagination li {
 
 .side-nav {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   list-style-position: outside;
   list-style-type: none;
   margin: 0;
@@ -5117,7 +5236,7 @@ ul.pagination li {
 }
 .side-nav li.active > a:first-child:not(.button) {
   color: #1cc7ff;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-weight: normal;
 }
 .side-nav li.divider {
@@ -5270,7 +5389,7 @@ ul.pagination li {
 .sub-nav li {
   color: #999999;
   float: left;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-size: 0.875rem;
   font-weight: normal;
   margin-left: 1rem;
@@ -5503,7 +5622,7 @@ table tr td {
   display: block;
   background-color: #EFEFEF;
   color: #222222;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-size: 1rem;
   padding: 1rem 2rem;
 }
@@ -5888,7 +6007,7 @@ meta.foundation-mq-topbar {
 .top-bar-section ul li > a {
   color: #FFFFFF;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-size: 0.8125rem;
   font-weight: normal;
   padding-left: 0.9375rem;
@@ -6181,7 +6300,7 @@ meta.foundation-mq-topbar {
   .contain-to-grid .top-bar {
     margin-bottom: 0;
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 1040px;
   }
 
   .top-bar-section {
@@ -6571,12 +6690,12 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #008CBA;
+  color: #52a9cf;
   line-height: inherit;
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #0078a0;
+  color: #8ec7e0;
 }
 a img {
   border: none;
@@ -6603,8 +6722,8 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  color: #222222;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  color: #333333;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.4;
@@ -6613,7 +6732,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  color: #6f6f6f;
+  color: #7a7a7a;
   font-size: 60%;
   line-height: 0;
 }
@@ -6644,7 +6763,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #7a7a7a;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -6682,7 +6801,7 @@ code {
   border-style: solid;
   border-width: 1px;
   color: #333333;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Menlo, Consolas, Courier, sans-serif;
   font-weight: normal;
   padding: 0.125rem 0.3125rem 0.0625rem;
 }
@@ -6760,7 +6879,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222;
+  color: #333333;
   cursor: help;
 }
 
@@ -6780,20 +6899,20 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125rem;
-  color: #555555;
+  color: #626262;
 }
 blockquote cite:before {
   content: "\2014 \0020";
 }
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: #626262;
 }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f;
+  color: #7a7a7a;
 }
 
 /* Microformats */

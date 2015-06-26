@@ -1,13 +1,14 @@
 @charset "utf-8";
 /*
- * wct2015 custom css
+ * tokyo.wordcamp.org/2015/
+ * custom css
  */
 
 // core files
 @import 'core/config';
+@import 'core/default';
 @import 'core/placeholder';
 @import 'core/mixins';
-// @import 'core/default';
 @import 'core/settings';
 @import 'core/foundation';
 

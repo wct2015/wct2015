@@ -9,6 +9,8 @@ $colorText          : #333333;
 $colorLink          : #52a9cf;
 $colorLinkHover     : lighten($colorLink, 15%);
 $colorSelection     : $colorLink;
+// navigation
+$colorNav           : #999999;
 
 //***********************
 // Path
@@ -33,7 +35,7 @@ $maxWidth           : 1040px;
 //***********************
 // Navigation Size
 //***********************
-$menuHeight         : 48px;
-// $menuItemWidth   : ;
-// $menuItemHeight  : ;
-// $menuPadding     : ($menuHeight - $menuItemHeight) / 2; // Calclate padding size automatically
+$navHeight         : 40px;
+// $navItemWidth   : ;
+$navItemHeight     : 12px;
+$navPadding        : ($navHeight - $navItemHeight) / 2; // Calclate padding size automatically

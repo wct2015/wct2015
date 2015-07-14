@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* site
+/* ---------------------------------------- */
+.site {
+  margin-top: $menuHeight;
+}
+/* 2 columns layout
+/* ---------------------------------------- */
+/* main */
+#main {
+  @include grid-row();
+}
+.site-content {
+  @include grid-column(
+    $columns: 8,
+    $collapse: false,
+    $float:left
+  );
+}
+.widget-area {
+  @include grid-column(
+    $columns: 4,
+    $collapse: false,
+    $float: right
+    )
+}
+/* single column layout
+/* ---------------------------------------- */

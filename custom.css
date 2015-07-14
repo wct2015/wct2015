@@ -8255,6 +8255,9 @@ The `sprites` mixin generates identical output to the CSS template
   .menu-item a:hover {
     background-color: #cccccc;
   }
+  .menu-item-type-custom > a {
+    margin-right: 0;
+  }
 
   .sub-menu li {
     margin: 0;
@@ -8272,31 +8275,45 @@ The `sprites` mixin generates identical output to the CSS template
 /* ---------------------------------------- */
 /* main */
 #main {
-  margin: 0 auto;
-  max-width: 1040px;
-  width: 100%;
-}
-#main:before, #main:after {
-  content: " ";
-  display: table;
-}
-#main:after {
-  clear: both;
+  padding: 0 10px;
 }
 
-.site-content {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 66.66667%;
-  float: left;
+#primary {
+  margin: 40px 0;
 }
 
-.widget-area {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 33.33333%;
-  float: right;
+#secondary {
+  margin: 40px 0;
 }
 
+@media only screen and (min-width: 40.0625em) {
+  #main {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
+    padding: 0;
+  }
+  #main:before, #main:after {
+    content: " ";
+    display: table;
+  }
+  #main:after {
+    clear: both;
+  }
+
+  #primary {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 66.66667%;
+    float: left;
+  }
+
+  #secondary {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: right;
+  }
+}
 /* single column layout
 /* ---------------------------------------- */

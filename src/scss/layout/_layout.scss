@@ -3,21 +3,33 @@
 /* ---------------------------------------- */
 /* main */
 #main {
-  @include grid-row();
+  padding: 0 10px;
 }
-.site-content {
-  @include grid-column(
-    $columns: 8,
-    $collapse: false,
-    $float:left
-  );
+#primary {
+  margin: 40px 0;
 }
-.widget-area {
-  @include grid-column(
-    $columns: 4,
-    $collapse: false,
-    $float: right
-    )
+#secondary {
+  margin: 40px 0;
+}
+@media #{$medium-up} {
+  #main {
+    @include grid-row();
+    padding: 0;
+  }
+  #primary {
+    @include grid-column(
+      $columns: 8,
+      $collapse: false,
+      $float:left
+    );
+  }
+  #secondary {
+    @include grid-column(
+      $columns: 4,
+      $collapse: false,
+      $float: right
+      )
+  }
 }
 /* single column layout
 /* ---------------------------------------- */

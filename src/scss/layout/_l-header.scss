@@ -89,6 +89,25 @@
         }
       }
     }
+    // &-item-has-children {
+      // > a {
+      //   position: relative;
+      //   &:before {
+      //     position: absolute;
+      //     top: 14px;
+      //     right: 3px;
+      //     content: "^";
+      //     transform: rotate(180deg);
+      //     color: #ffffff;
+      //     font-size: rem-calc(10);
+      //   }
+      // }
+    // }
+    &-item-type-custom {
+      > a {
+        margin-right: 0;
+      }
+    }
   }
   .sub-menu {
     li {

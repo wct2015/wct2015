@@ -8224,11 +8224,6 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 @media screen and (min-width: 598px) {
-  .main-navigation ul ul {
-    position: absolute;
-    top: 2.6rem;
-  }
-
   .menu-main-container {
     margin: 0 auto;
     max-width: 1040px;
@@ -8240,6 +8235,17 @@ The `sprites` mixin generates identical output to the CSS template
   }
   .menu-main-container:after {
     clear: both;
+  }
+
+  .main-navigation ul ul {
+    position: absolute;
+    top: 2.6rem;
+  }
+  .main-navigation ul ul li {
+    width: 233px;
+  }
+  .main-navigation ul ul a {
+    width: 233px;
   }
 
   .menu {
@@ -8267,7 +8273,6 @@ The `sprites` mixin generates identical output to the CSS template
     transition: 0.2s;
   }
   .sub-menu li a:hover {
-    background-color: #cccccc;
     color: #ffffff;
   }
 }

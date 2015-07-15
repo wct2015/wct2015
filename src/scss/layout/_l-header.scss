@@ -66,16 +66,22 @@
   }
 }
 @media screen and (min-width: 598px) {
+  .menu-main-container {
+    @include grid-row();
+  }
   .main-navigation {
     ul {
       ul {
         position: absolute;
         top: 2.6rem;
+        li {
+          width: 233px;
+        }
+        a {
+          width: 233px;
+        }
       }
     }
-  }
-  .menu-main-container {
-    @include grid-row();
   }
   .menu {
     height: $navHeight;
@@ -89,20 +95,9 @@
         }
       }
     }
-    // &-item-has-children {
-      // > a {
-      //   position: relative;
-      //   &:before {
-      //     position: absolute;
-      //     top: 14px;
-      //     right: 3px;
-      //     content: "^";
-      //     transform: rotate(180deg);
-      //     color: #ffffff;
-      //     font-size: rem-calc(10);
-      //   }
-      // }
-    // }
+    &-item-has-children {
+      > a {}
+    }
     &-item-type-custom {
       > a {
         margin-right: 0;
@@ -116,7 +111,6 @@
         color: $colorLink;
         transition: 0.2s;
         &:hover {
-          background-color: lighten($colorNav, 20%);
           color: #ffffff;
         }
       }

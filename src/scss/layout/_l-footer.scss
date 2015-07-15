@@ -2,4 +2,12 @@
 
 /* footer
 /* ---------------------------------------- */
-.l-footer {}
+.site-footer {
+  background-color: #999999;
+}
+.footer-widgets {
+  @include grid-row();
+}
+.site-info {
+  @include grid-row();
+}

@@ -8121,5 +8121,204 @@ The `sprites` mixin generates identical output to the CSS template
 */
 /* footer
 /* ---------------------------------------- */
+.site-footer {
+  background-color: #999999;
+}
+
+.footer-widgets {
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+}
+.footer-widgets:before, .footer-widgets:after {
+  content: " ";
+  display: table;
+}
+.footer-widgets:after {
+  clear: both;
+}
+
+.site-info {
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+}
+.site-info:before, .site-info:after {
+  content: " ";
+  display: table;
+}
+.site-info:after {
+  clear: both;
+}
+
 /* header
+/* ---------------------------------------- */
+.site-header {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+.site-title {
+  width: 100%;
+  height: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 80px 0;
+  text-align: center;
+}
+.site-title a {
+  font-size: 1.125rem;
+}
+
+.site-description {
+  display: none;
+}
+
+/* navigation
+/* ---------------------------------------- */
+.menu-toggle {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  text-align: center;
+  background-color: #999999;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.main-navigation {
+  background-color: #999999;
+}
+
+.main-small-navigation {
+  width: 100%;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.menu {
+  margin: 10px;
+}
+.menu a {
+  display: block;
+  padding: 14px;
+  line-height: 1.0;
+  font-size: 0.875rem;
+}
+.menu-item {
+  min-height: 40px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.sub-menu {
+  background-color: #ffffff;
+}
+.sub-menu li {
+  min-height: 40px;
+  margin: 0 10px;
+  border-bottom: 1px dotted #cccccc;
+}
+.sub-menu li:last-child {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 598px) {
+  .menu-main-container {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
+  }
+  .menu-main-container:before, .menu-main-container:after {
+    content: " ";
+    display: table;
+  }
+  .menu-main-container:after {
+    clear: both;
+  }
+
+  .main-navigation ul ul {
+    position: absolute;
+    top: 2.6rem;
+  }
+  .main-navigation ul ul li {
+    width: 233px;
+  }
+  .main-navigation ul ul a {
+    width: 233px;
+  }
+
+  .menu {
+    height: 40px;
+  }
+  .menu-item {
+    border-bottom: none;
+  }
+  .menu-item a {
+    color: #ffffff;
+    transition: 0.2s;
+  }
+  .menu-item a:hover {
+    background-color: #cccccc;
+  }
+  .menu-item-type-custom > a {
+    margin-right: 0;
+  }
+
+  .sub-menu li {
+    margin: 0;
+  }
+  .sub-menu li a {
+    color: #52a9cf;
+    transition: 0.2s;
+  }
+  .sub-menu li a:hover {
+    color: #ffffff;
+  }
+}
+/* 2 columns layout
+/* ---------------------------------------- */
+/* main */
+#main {
+  padding: 0 10px;
+}
+
+#primary {
+  margin: 40px 0;
+}
+
+#secondary {
+  margin: 40px 0;
+}
+
+@media only screen and (min-width: 40.0625em) {
+  #main {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
+    padding: 0;
+  }
+  #main:before, #main:after {
+    content: " ";
+    display: table;
+  }
+  #main:after {
+    clear: both;
+  }
+
+  #primary {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 66.66667%;
+    float: left;
+  }
+
+  #secondary {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: right;
+  }
+}
+/* single column layout
 /* ---------------------------------------- */

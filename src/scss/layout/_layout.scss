@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* 2 columns layout
+/* ---------------------------------------- */
+/* main */
+#main {
+  padding: 0 10px;
+}
+#primary {
+  margin: 40px 0;
+}
+#secondary {
+  margin: 40px 0;
+}
+@media #{$medium-up} {
+  #main {
+    @include grid-row();
+    padding: 0;
+  }
+  #primary {
+    @include grid-column(
+      $columns: 8,
+      $collapse: false,
+      $float:left
+    );
+  }
+  #secondary {
+    @include grid-column(
+      $columns: 4,
+      $collapse: false,
+      $float: right
+      )
+  }
+}
+/* single column layout
+/* ---------------------------------------- */

@@ -5,7 +5,8 @@
 //***********************
 /* columns */
 %baseWidth {
-  width: $maxWidth;
+  width: 100%;
+  max-width: $maxWidth;
   margin: 0 auto;
 }
 

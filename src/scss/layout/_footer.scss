@@ -3,6 +3,7 @@
 /* footer
 /* ---------------------------------------- */
 .site-footer {
+  padding: 40px 0;
   background-color: #999999;
 }
 .footer-widgets {
@@ -10,4 +11,6 @@
 }
 .site-info {
   @include grid-row();
+  padding: 40px 0;
+  text-align: center;
 }

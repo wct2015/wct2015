@@ -123,6 +123,15 @@ table {
 /* columns */
 /* Table */
 /* clearfix */
+.sponsors__list:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: ".";
+  font-size: 0;
+}
+
 meta.foundation-version {
   font-family: "/5.5.2/";
 }
@@ -8122,6 +8131,7 @@ The `sprites` mixin generates identical output to the CSS template
 /* footer
 /* ---------------------------------------- */
 .site-footer {
+  padding: 40px 0;
   background-color: #999999;
 }
 
@@ -8142,6 +8152,8 @@ The `sprites` mixin generates identical output to the CSS template
   margin: 0 auto;
   max-width: 1040px;
   width: 100%;
+  padding: 40px 0;
+  text-align: center;
 }
 .site-info:before, .site-info:after {
   content: " ";
@@ -8276,9 +8288,9 @@ The `sprites` mixin generates identical output to the CSS template
     color: #ffffff;
   }
 }
-/* 2 columns layout
+/* layout
 /* ---------------------------------------- */
-/* main */
+/* two columns */
 #main {
   padding: 0 10px;
 }
@@ -8320,5 +8332,60 @@ The `sprites` mixin generates identical output to the CSS template
     float: right;
   }
 }
-/* single column layout
+/* single colmun */
+/* sponsors
 /* ---------------------------------------- */
+.sponsors {
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+  background-color: #ffffff;
+}
+.sponsors:before, .sponsors:after {
+  content: " ";
+  display: table;
+}
+.sponsors:after {
+  clear: both;
+}
+.sponsors__column {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+.sponsors__twoColumns {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 40.0625em) {
+  .sponsors__twoColumns {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+  }
+}
+.sponsors__title {
+  margin: 40px 0;
+  text-align: center;
+}
+.sponsors__subTitle {
+  margin: 30px 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  font-size: 1.25rem;
+}
+.sponsors__list {
+  margin-left: 0;
+}
+.sponsors__list li {
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: #f5f5f5;
+}

@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* sponsors
+/* ---------------------------------------- */
+.sponsors {
+  @include grid-row();
+  background-color: #ffffff;
+  &__column {
+    @include grid-column(
+      $columns: 12,
+      $collapse: false
+      // $float:left
+    );
+  }
+  &__twoColumns {
+    @include grid-column(
+      $columns: 12,
+      $collapse: false
+      // $float:left
+    );
+    @media #{$medium-up} {
+      @include grid-column(
+        $columns: 6,
+        $collapse: false,
+        $float:left
+      )
+    }
+  }
+  &__title {
+    margin: 40px 0;
+    text-align: center;
+  }
+  &__subTitle {
+    margin: 30px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+    font-size: rem-calc(20);
+  }
+  &__list {
+    @extend %clearfix;
+    margin-left: 0;
+    li {
+      text-align: center;
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+      padding: 20px 0;
+      background-color: #f5f5f5;
+    }
+  }
+}

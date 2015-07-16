@@ -1,14 +1,13 @@
 @charset "utf-8";
 /* layout
 /* ---------------------------------------- */
+/* after-header-widgets */
+#after-header-widgets {
+  margin: 40px auto;
+}
 /* two columns */
 #main {
   padding: 0 10px;
-}
-#primary {
-  margin: 40px 0;
-}
-#secondary {
   margin: 40px 0;
 }
 @media #{$medium-up} {
@@ -22,6 +21,7 @@
       $collapse: false,
       $float:left
     )
+
   }
   #secondary {
     @include grid-column(

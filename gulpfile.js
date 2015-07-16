@@ -111,7 +111,7 @@ gulp.task('image-min', function() {
 *******************************************************************************/
 
 gulp.task('jade', function() {
-  return gulp.src(paths.jadePath + '*.jade')
+  return gulp.src(paths.jadePath + '**/*.jade')
     .pipe($.data(function(file) {
       return require('./setting.json');
     }))

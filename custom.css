@@ -8128,6 +8128,59 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
+/* featured
+/* ---------------------------------------- */
+.featured {
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+}
+.featured:before, .featured:after {
+  content: " ";
+  display: table;
+}
+.featured:after {
+  clear: both;
+}
+.featured__title {
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 1.125rem;
+}
+.featured__content a {
+  display: block;
+  min-height: 100px;
+  height: auto;
+  background-color: #f5f5f5;
+}
+@media only screen and (max-width: 40em) {
+  .featured__content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 40.0625em) {
+  .featured__content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  .featured__content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 25%;
+    float: left;
+    margin-bottom: 0;
+  }
+}
+
 /* footer
 /* ---------------------------------------- */
 .site-footer {
@@ -8165,6 +8218,15 @@ The `sprites` mixin generates identical output to the CSS template
 
 /* header
 /* ---------------------------------------- */
+#masthead {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 40.0625em) {
+  #masthead {
+    margin-bottom: 80px;
+  }
+}
+
 .site-header {
   width: 100%;
   margin: 0 auto;
@@ -8290,16 +8352,14 @@ The `sprites` mixin generates identical output to the CSS template
 }
 /* layout
 /* ---------------------------------------- */
+/* after-header-widgets */
+#after-header-widgets {
+  margin: 40px auto;
+}
+
 /* two columns */
 #main {
   padding: 0 10px;
-}
-
-#primary {
-  margin: 40px 0;
-}
-
-#secondary {
   margin: 40px 0;
 }
 

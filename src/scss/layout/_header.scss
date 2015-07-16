@@ -2,6 +2,12 @@
 
 /* header
 /* ---------------------------------------- */
+#masthead {
+  margin-bottom: 30px;
+  @media #{$medium-up} {
+    margin-bottom: 80px;
+  }
+}
 .site-header {
   width: 100%;
   margin: 0 auto;

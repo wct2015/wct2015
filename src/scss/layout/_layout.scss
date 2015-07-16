@@ -1,7 +1,7 @@
 @charset "utf-8";
-/* 2 columns layout
+/* layout
 /* ---------------------------------------- */
-/* main */
+/* two columns */
 #main {
   padding: 0 10px;
 }
@@ -21,15 +21,15 @@
       $columns: 8,
       $collapse: false,
       $float:left
-    );
+    )
   }
   #secondary {
     @include grid-column(
       $columns: 4,
       $collapse: false,
       $float: right
-      )
+    )
   }
 }
-/* single column layout
-/* ---------------------------------------- */
+/* single colmun */
+

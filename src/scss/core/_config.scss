@@ -4,6 +4,11 @@
 // Color
 //***********************
 
+//theme color
+$colorWhite : #ffffff;
+$colorBlack : #222222;
+$colorBlue : #0b346e;
+
 // Text Color
 $colorText          : #333333;
 $colorLink          : #52a9cf;
@@ -11,6 +16,8 @@ $colorLinkHover     : lighten($colorLink, 15%);
 $colorSelection     : $colorLink;
 // navigation
 $colorNav           : #999999;
+
+
 
 //***********************
 // Path

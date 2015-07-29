@@ -8235,10 +8235,10 @@ The `sprites` mixin generates identical output to the CSS template
 
 .site-title {
   width: 100%;
-  height: 200px;
+  height: 400px;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 80px 0;
+  padding: 140px 0;
   text-align: center;
 }
 .site-title a {
@@ -8255,14 +8255,16 @@ The `sprites` mixin generates identical output to the CSS template
   width: 100%;
   height: 40px;
   margin: 0;
-  text-align: center;
-  background-color: #999999;
-  font-size: 1.125rem;
+  padding: 8px;
+  text-align: left;
+  background-color: #222222;
+  color: #ffffff;
+  font-size: 1rem;
   cursor: pointer;
 }
 
 .main-navigation {
-  background-color: #999999;
+  background-color: #222222;
 }
 
 .main-small-navigation {
@@ -8278,11 +8280,12 @@ The `sprites` mixin generates identical output to the CSS template
   display: block;
   padding: 14px;
   line-height: 1.0;
+  color: #222222;
   font-size: 0.875rem;
 }
 .menu-item {
   min-height: 40px;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #a2a2a2;
 }
 
 .sub-menu {
@@ -8291,13 +8294,14 @@ The `sprites` mixin generates identical output to the CSS template
 .sub-menu li {
   min-height: 40px;
   margin: 0 10px;
-  border-bottom: 1px dotted #cccccc;
+  border-bottom: 1px dotted #a2a2a2;
 }
 .sub-menu li:last-child {
   border-bottom: none;
 }
 
-@media screen and (min-width: 598px) {
+/* media */
+@media screen and (min-width: 600px) {
   .menu-main-container {
     margin: 0 auto;
     max-width: 1040px;
@@ -8333,7 +8337,7 @@ The `sprites` mixin generates identical output to the CSS template
     transition: 0.2s;
   }
   .menu-item a:hover {
-    background-color: #cccccc;
+    background-color: #555555;
   }
   .menu-item-type-custom > a {
     margin-right: 0;
@@ -8343,11 +8347,12 @@ The `sprites` mixin generates identical output to the CSS template
     margin: 0;
   }
   .sub-menu li a {
-    color: #52a9cf;
+    color: #222222;
     transition: 0.2s;
   }
   .sub-menu li a:hover {
-    color: #ffffff;
+    border-left: 2px solid #222222;
+    background-color: #ffffff;
   }
 }
 /* layout
@@ -8392,7 +8397,6 @@ The `sprites` mixin generates identical output to the CSS template
     float: right;
   }
 }
-/* single colmun */
 /* sponsors
 /* ---------------------------------------- */
 .sponsors {

@@ -8,17 +8,21 @@
 $colorWhite         : #ffffff;
 $colorBlack         : #222222;
 $colorBlue          : #0b346e;
+$colorAccomplice    : #3094d1;
 $colorGold          : #c19534;
+$colorSilver        : #d3d3d3;
+$colorBronze        : #a46628;
+$colorMedia         : #8fbbcc;
+$colorSupport       : $colorMedia;
 
 // Text Color
 $colorText          : #333333;
 $colorLink          : #52a9cf;
 $colorLinkHover     : lighten($colorLink, 15%);
 $colorSelection     : $colorLink;
+
 // navigation
 $colorNav           : $colorBlack;
-
-
 
 //***********************
 // Path

@@ -35,7 +35,6 @@
   a {
     width: 100%;
     max-width: 280px;
-    margin: 4px auto;
     display: block;
     color: $colorWhite;
     letter-spacing: 1.2px;
@@ -44,10 +43,15 @@
     }
   }
   &-generator {
+    margin: 5px auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #ffffff;
     font-size: rem-calc(13);
     font-weight: bold;
   }
   &-network {
+    margin: 10px auto;
     font-size: rem-calc(10);
   }
 }

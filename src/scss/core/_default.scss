@@ -22,6 +22,7 @@ iframe {
 
 /* text-level semantics */
 a {
+  cursor: pointer;
   color: $colorLink;
   text-decoration: none;
   transition: 0.3s all;

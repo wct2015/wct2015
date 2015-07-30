@@ -8262,8 +8262,9 @@ The `sprites` mixin generates identical output to the CSS template
 /* footer
 /* ---------------------------------------- */
 .site-footer {
-  padding: 40px 0;
-  background-color: #999999;
+  padding: 60px 0;
+  padding-bottom: 0;
+  background: #0b346e url("files/2015/08/bg_footer.png") repeat 0 0;
 }
 
 .footer-widgets {
@@ -8280,18 +8281,50 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 .site-info {
-  margin: 0 auto;
-  max-width: 1040px;
-  width: 100%;
-  padding: 40px 0;
+  position: relative;
+  margin-top: 160px;
+  padding: 70px 0 60px 0;
   text-align: center;
-}
-.site-info:before, .site-info:after {
-  content: " ";
-  display: table;
+  background-color: #222222;
+  border-top: 1px solid #e7d3a7;
 }
 .site-info:after {
-  clear: both;
+  display: block;
+  overflow: hidden;
+  padding-top: 145px;
+  width: 122px;
+  height: 0;
+  background-image: url("files/2015/08/wapuu_mono.png");
+  background-position: 0 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  width: 122px;
+  height: 145px;
+  margin: 0 auto;
+  content: "";
+  z-index: 10;
+}
+.site-info a {
+  width: 100%;
+  max-width: 280px;
+  margin: 4px auto;
+  display: block;
+  color: #ffffff;
+  letter-spacing: 1.2px;
+}
+.site-info a:hover {
+  opacity: 0.8;
+}
+.site-info-generator {
+  font-size: 0.8125rem;
+  font-weight: bold;
+}
+.site-info-network {
+  font-size: 0.625rem;
 }
 
 /* header

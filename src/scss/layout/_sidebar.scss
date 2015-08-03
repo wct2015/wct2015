@@ -2,5 +2,30 @@
 /* sidebar
 /* ---------------------------------------- */
 #primary-sidebar {
+  padding: 0 20px;
   background-color: $colorWhite;
+  .widget {
+    padding: 20px 0;
+    margin: 0;
+    &-title {
+      margin: 10px 0;
+      padding-bottom: 5px;
+      border-bottom: 2px solid lighten($colorOrange, 40%);
+      font-size: rem-calc(16);
+      font-weight: bold;
+    }
+    ul {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      li {
+        a {
+          font-size: rem-calc(14);
+        }
+      }
+    }
+  }
 }

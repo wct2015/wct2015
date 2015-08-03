@@ -8608,7 +8608,30 @@ body {
 /* sidebar
 /* ---------------------------------------- */
 #primary-sidebar {
+  padding: 0 20px;
   background-color: #ffffff;
+}
+#primary-sidebar .widget {
+  padding: 20px 0;
+  margin: 0;
+}
+#primary-sidebar .widget-title {
+  margin: 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fae1c7;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#primary-sidebar .widget ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+#primary-sidebar .widget ul:last-child {
+  margin-bottom: 0;
+}
+#primary-sidebar .widget ul li a {
+  font-size: 0.875rem;
 }
 
 /* sponsors

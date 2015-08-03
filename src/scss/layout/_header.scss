@@ -4,7 +4,7 @@
 /* ---------------------------------------- */
 
 #masthead {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   @media #{$medium-up} {
     margin-bottom: 80px;
   }
@@ -19,6 +19,7 @@
     @extend %slideIn;
     @extend %hovering;
     @include imageReplace('08/wapuu.png', 426px, 562px, .5);
+    padding-top: 94px;
     position: absolute;
     top: 38%;
     right: 4%;
@@ -47,6 +48,11 @@
   display: none;
 }
 /* media */
+@media screen and (max-width: 600px) {
+  .site-header {
+    height: 300px;
+  }
+}
 @media #{$medium-up} {
   .site-header {
     &:after {
@@ -54,6 +60,7 @@
       right: 4%;
       width: 130px;
       height: auto;
+      padding-top: 176px;
     }
   }
   .site-title {
@@ -72,6 +79,7 @@
       height: auto;
       top: 24%;
       right: 10%;
+      padding-top: 250px;
     }
   }
   .site-title {
@@ -102,7 +110,7 @@
   height: $navHeight;
   margin: 0;
   padding: 8px;
-  text-align: left;
+  text-align: center;
   background-color: $colorNav;
   color: $colorWhite;
   font-size: rem-calc(16);
@@ -138,6 +146,9 @@
     border-bottom: 1px dotted lighten($colorNav, 50%);
     &:last-child {
       border-bottom: none;
+    }
+    a {
+      color: lighten($colorBlue, 10%);
     }
   }
 }
@@ -185,10 +196,10 @@
     li {
       margin: 0;
       a {
-        color: $colorBlack;
+        // color: lighten($colorBlue, 10%);
         transition: 0.2s;
         &:hover {
-          border-left: 2px solid $colorBlack;
+          border-left: 2px solid $colorBlue;
           background-color: $colorWhite;
         }
       }

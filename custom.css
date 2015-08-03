@@ -8325,7 +8325,7 @@ The `sprites` mixin generates identical output to the CSS template
 /* header
 /* ---------------------------------------- */
 #masthead {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 @media only screen and (min-width: 40.0625em) {
   #masthead {
@@ -8349,6 +8349,7 @@ The `sprites` mixin generates identical output to the CSS template
   background-position: 0 0;
   background-size: 100%;
   background-repeat: no-repeat;
+  padding-top: 94px;
   position: absolute;
   top: 38%;
   right: 4%;
@@ -8379,12 +8380,18 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /* media */
+@media screen and (max-width: 600px) {
+  .site-header {
+    height: 300px;
+  }
+}
 @media only screen and (min-width: 40.0625em) {
   .site-header:after {
     top: 38%;
     right: 4%;
     width: 130px;
     height: auto;
+    padding-top: 176px;
   }
 
   .site-title {
@@ -8402,6 +8409,7 @@ The `sprites` mixin generates identical output to the CSS template
     height: auto;
     top: 24%;
     right: 10%;
+    padding-top: 250px;
   }
 
   .site-title {
@@ -8430,7 +8438,7 @@ The `sprites` mixin generates identical output to the CSS template
   height: 40px;
   margin: 0;
   padding: 8px;
-  text-align: left;
+  text-align: center;
   background-color: #222222;
   color: #ffffff;
   font-size: 1rem;
@@ -8472,6 +8480,9 @@ The `sprites` mixin generates identical output to the CSS template
 }
 .sub-menu li:last-child {
   border-bottom: none;
+}
+.sub-menu li a {
+  color: #104a9c;
 }
 
 /* media */
@@ -8521,11 +8532,10 @@ The `sprites` mixin generates identical output to the CSS template
     margin: 0;
   }
   .sub-menu li a {
-    color: #222222;
     transition: 0.2s;
   }
   .sub-menu li a:hover {
-    border-left: 2px solid #222222;
+    border-left: 2px solid #0b346e;
     background-color: #ffffff;
   }
 }

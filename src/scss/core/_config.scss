@@ -17,7 +17,7 @@ $colorSupport       : $colorMedia;
 
 // Text Color
 $colorText          : #333333;
-$colorLink          : #52a9cf;
+$colorLink          : lighten($colorBlue, 10%);
 $colorLinkHover     : lighten($colorLink, 15%);
 $colorSelection     : $colorLink;
 
@@ -43,7 +43,7 @@ $fontFamilyCode     : Menlo,Consolas,Courier,sans-serif;
 //***********************
 // Colum Base Width
 //***********************
-$maxWidth           : 1040px;
+$maxWidth           : 1080px;
 
 //***********************
 // Navigation Size

@@ -8200,6 +8200,7 @@ The `sprites` mixin generates identical output to the CSS template
 /* content
 /* ---------------------------------------- */
 #content {
+  padding: 20px 0;
   background-color: #ffffff;
 }
 #content .entry-header {
@@ -8209,6 +8210,11 @@ The `sprites` mixin generates identical output to the CSS template
   padding: 0 20px;
 }
 #content footer.entry-meta {
+  margin: 40px auto;
+  padding: 0 20px;
+}
+#content .paging-navigation {
+  margin: 20px 0;
   padding: 0 20px;
 }
 

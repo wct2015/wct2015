@@ -22,7 +22,7 @@ $colorSupport       : $colorMedia;
 $colorText          : #333333;
 $colorLink          : lighten($colorBlue, 10%);
 $colorLinkHover     : lighten($colorLink, 15%);
-$colorSelection     : $colorLink;
+$colorSelection     : lighten($colorLink, 50%);
 
 // navigation
 $colorNav           : $colorBlack;

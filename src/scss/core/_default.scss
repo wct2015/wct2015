@@ -4,7 +4,7 @@
 
 /* the root element */
 html {
-  font-size: 14px;
+  font-size: rem-calc(14);
 }
 body {
   background-color: #fff;

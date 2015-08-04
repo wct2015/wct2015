@@ -140,6 +140,34 @@
 }
 
 //***********************
+// button Base
+// ---
+// required foundation
+//***********************
+@mixin buttonBase($padding, $color, $fullWidth: false) {
+  @include button(
+    $padding: $padding,
+    $bg: $color,
+    $full-width: $fullWidth
+  );
+  box-shadow: 0 2px 0 darken($color, 10%);
+  &:focus {
+      outline: none;
+  }
+  &:link,
+  &:visited {
+    color: $colorWhite;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    color: $colorWhite;
+    text-decoration: none;
+  }
+}
+
+//***********************
 // Animates
 //***********************
 %slideIn {

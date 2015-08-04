@@ -9,6 +9,7 @@ $colorWhite         : #ffffff;
 $colorBlack         : #222222;
 $colorBlue          : #0b346e;
 $colorOrange        : #e07b15;
+$colorRed           : #c3322c;
 
 $colorAccomplice    : #3094d1;
 $colorGold          : #c19534;
@@ -21,7 +22,7 @@ $colorSupport       : $colorMedia;
 $colorText          : #333333;
 $colorLink          : lighten($colorBlue, 10%);
 $colorLinkHover     : lighten($colorLink, 15%);
-$colorSelection     : $colorLink;
+$colorSelection     : lighten($colorLink, 50%);
 
 // navigation
 $colorNav           : $colorBlack;

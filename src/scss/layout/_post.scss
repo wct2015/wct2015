@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* post archive
+/* ---------------------------------------- */
+.hentry {
+  margin-bottom: 40px;
+}
+/* page-header */
+.page-header {
+  margin-bottom: 20px;
+}
+.page-title {
+  margin-bottom: 0;
+  padding-bottom: 4px;
+  font-size: rem-calc(18);
+  border-bottom: 4px solid $colorWhite;
+  .vcard {
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    a {
+      color: $colorBlack;
+      font-size: rem-calc(18);
+    }
+  }
+}
+/* paging-navigation */
+#nav-above {
+  display: none;
+}
+#nav-below {
+  margin: 20px 0;
+  padding: 0 20px;
+  a {
+    font-size: rem-calc(12);
+    @media #{$medium-up} {
+      font-size: rem-calc(14);
+    }
+  }
+}
+/* post
+/* ---------------------------------------- */
+article.post,
+article.page {
+  background-color: $colorWhite;
+  border: 1px solid lighten($colorSilver, 13%);
+  border-top: 2px solid $colorBlue;
+}
+.entry-header {
+  padding-top: 10px;
+  .entry-meta {
+    padding: 0 20px 10px 20px;
+    background: lighten($colorGold, 20%);
+    color: $colorWhite;
+    font-size: rem-calc(12);
+    line-height: 1;
+  }
+  .entry-date {
+    color: $colorWhite;
+    font-weight: bold;
+  }
+  .vcard {
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    font-size: rem-calc(12);
+    a {
+      color: $colorWhite;
+      font-size: rem-calc(12);
+    }
+  }
+}
+.entry-title {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 10px solid lighten($colorGold, 20%);
+  line-height: 1.4;
+  font-size: rem-calc(20);
+  a {
+    color: $colorBlack;
+    &:hover {
+      color: lighten($colorBlack, 24%);
+    }
+  }
+}
+.entry-content {
+  padding: 0 20px;
+}
+footer.entry-meta {
+  margin: 40px auto;
+  padding: 0 20px;
+  color: $colorGold;
+  font-size: rem-calc(14);
+  a {
+    color: $colorGold;
+    font-weight: bold;
+  }
+}
+/* media */
+@media #{$medium-up} {
+  article.post,
+  article.page {
+    background-image: url($filePath + '08/bg_entryHeader.png');
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: 20px auto;
+    border-top: none;
+  }
+  .entry-header {
+    position: relative;
+    &:before {
+      position: absolute;
+      bottom: -23px;
+      right: 0;
+      width: 60px;
+      height: 74px;
+      background-image: url($filePath + '08/img_kikyou.png');
+      background-repeat: no-repeat;
+      background-size: 60px auto;
+      content: "";
+    }
+  }
+  .entry-title {
+    margin-top: 34px;
+    padding-bottom: 14px;
+    font-size: rem-calc(28);
+    line-height: 1.5;
+  }
+}
+@media #{$large-up} {
+  .entry-header {
+    &:before {
+      bottom: -24px;
+      width: 66px;
+      height: 80px;
+      background-size: 66px auto;
+    }
+    .entry-meta {
+      font-size: rem-calc(14);
+    }
+    .vcard {
+      margin-bottom: 0;
+      padding: 0;
+      border: none;
+      font-size: rem-calc(14);
+      a {
+        font-size: rem-calc(14);
+      }
+    }
+  }
+  .entry-title {
+    font-size: rem-calc(32);
+  }
+}
+/* page-links */
+.page-links {
+  padding: 10px;
+  border-top: 1px solid lighten($colorSilver, 10%);
+  border-bottom: 1px solid lighten($colorSilver, 10%);
+  a {
+    margin: 0 10px;
+    font-size: rem-calc(16);
+  }
+}

@@ -11,11 +11,13 @@
     font-weight: bold;
   }
   h2 {
+    padding-bottom: 6px;
     font-size: rem-calc(18);
     font-weight: bold;
     border-bottom: 2px solid lighten($colorOrange, 44%);
   }
   h3 {
+    padding-bottom: 6px;
     font-size: rem-calc(18);
     font-weight: bold;
     border-bottom: 1px solid #f5f5f5;

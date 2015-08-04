@@ -8107,15 +8107,15 @@ th.hide-for-touch {
   display: inline-block;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   font-size: 0.8125rem;
-  background-color: #3b84eb;
-  border-color: #1565d6;
+  background-color: #ea851f;
+  border-color: #c26b12;
   color: #ffffff;
   transition: background-color 300ms ease-out;
-  box-shadow: 0 2px 0 #2878ea;
+  box-shadow: 0 2px 0 #c46c12;
   font-size: 1rem;
 }
 .entry-content .btn:hover, .entry-content .btn:focus {
-  background-color: #1565d6;
+  background-color: #c26b12;
 }
 .entry-content .btn:hover, .entry-content .btn:focus {
   color: #ffffff;
@@ -8153,15 +8153,15 @@ th.hide-for-touch {
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-  background-color: #3b84eb;
-  border-color: #1565d6;
+  background-color: #ea851f;
+  border-color: #c26b12;
   color: #ffffff;
   transition: background-color 300ms ease-out;
-  box-shadow: 0 2px 0 #2878ea;
+  box-shadow: 0 2px 0 #c46c12;
   font-size: 1rem;
 }
 .entry-content .btnFull:hover, .entry-content .btnFull:focus {
-  background-color: #1565d6;
+  background-color: #c26b12;
 }
 .entry-content .btnFull:hover, .entry-content .btnFull:focus {
   color: #ffffff;
@@ -8203,16 +8203,16 @@ th.hide-for-touch {
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-  background-color: #3b84eb;
-  border-color: #1565d6;
+  background-color: #ea851f;
+  border-color: #c26b12;
   color: #ffffff;
   transition: background-color 300ms ease-out;
-  box-shadow: 0 2px 0 #2878ea;
+  box-shadow: 0 2px 0 #c46c12;
   margin-bottom: 0;
   font-size: 1rem;
 }
 .entry-content .btnGroup__btn:hover, .entry-content .btnGroup__btn:focus {
-  background-color: #1565d6;
+  background-color: #c26b12;
 }
 .entry-content .btnGroup__btn:hover, .entry-content .btnGroup__btn:focus {
   color: #ffffff;
@@ -8307,11 +8307,13 @@ th.hide-for-touch {
   font-weight: bold;
 }
 .entry-content h2 {
+  padding-bottom: 6px;
   font-size: 1.125rem;
   font-weight: bold;
   border-bottom: 2px solid #fcebda;
 }
 .entry-content h3 {
+  padding-bottom: 6px;
   font-size: 1.125rem;
   font-weight: bold;
   border-bottom: 1px solid #f5f5f5;
@@ -8978,6 +8980,10 @@ body {
 /* ---------------------------------------- */
 /* post archive
 /* ---------------------------------------- */
+.hentry {
+  margin-bottom: 40px;
+}
+
 /* page-header */
 .page-header {
   margin-bottom: 20px;
@@ -9031,13 +9037,13 @@ article.page {
 }
 .entry-header .entry-meta {
   padding: 0 20px 10px 20px;
-  background-color: #f4f4f4;
-  color: #c19534;
+  background: #dcbf7f;
+  color: #ffffff;
   font-size: 0.75rem;
   line-height: 1;
 }
 .entry-header .entry-date {
-  color: #c19534;
+  color: #ffffff;
   font-weight: bold;
 }
 .entry-header .vcard {
@@ -9047,7 +9053,7 @@ article.page {
   font-size: 0.75rem;
 }
 .entry-header .vcard a {
-  color: #c19534;
+  color: #ffffff;
   font-size: 0.75rem;
 }
 
@@ -9056,7 +9062,7 @@ article.page {
   margin-bottom: 0;
   padding: 0 20px;
   padding-bottom: 20px;
-  border-bottom: 10px solid #f4f4f4;
+  border-bottom: 10px solid #dcbf7f;
   line-height: 1.4;
   font-size: 1.25rem;
 }
@@ -9093,35 +9099,37 @@ footer.entry-meta a {
     border-top: none;
   }
 
-  .entry-header .entry-meta {
+  .entry-header {
     position: relative;
-    border-bottom: 1px solid #c19534;
   }
-  .entry-header .entry-meta:before {
+  .entry-header:before {
     position: absolute;
-    top: -26px;
+    bottom: -23px;
     right: 0;
-    width: 56px;
-    height: 64px;
+    width: 60px;
+    height: 74px;
     background-image: url("files/2015/08/img_kikyou.png");
     background-repeat: no-repeat;
-    background-size: 56px auto;
+    background-size: 60px auto;
     content: "";
   }
 
   .entry-title {
-    margin-top: 30px;
-    padding-bottom: 20px;
+    margin-top: 34px;
+    padding-bottom: 14px;
     font-size: 1.75rem;
     line-height: 1.5;
   }
 }
 @media only screen and (min-width: 64.0625em) {
+  .entry-header:before {
+    bottom: -24px;
+    width: 66px;
+    height: 80px;
+    background-size: 66px auto;
+  }
   .entry-header .entry-meta {
     font-size: 0.875rem;
-  }
-  .entry-header .entry-meta:before {
-    top: -24px;
   }
   .entry-header .vcard {
     margin-bottom: 0;
@@ -9130,7 +9138,6 @@ footer.entry-meta a {
     font-size: 0.875rem;
   }
   .entry-header .vcard a {
-    color: #c19534;
     font-size: 0.875rem;
   }
 
@@ -9138,6 +9145,17 @@ footer.entry-meta a {
     font-size: 2rem;
   }
 }
+/* page-links */
+.page-links {
+  padding: 10px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+.page-links a {
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
 /* sidebar
 /* ---------------------------------------- */
 #primary-sidebar {

@@ -150,7 +150,7 @@
     $bg: $color,
     $full-width: $fullWidth
   );
-  box-shadow: 0 2px 0 lighten($colorLink, 20%);
+  box-shadow: 0 2px 0 darken($color, 10%);
   &:focus {
       outline: none;
   }

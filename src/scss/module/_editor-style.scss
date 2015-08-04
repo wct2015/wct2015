@@ -58,9 +58,28 @@
     margin-left: 16px;
     margin-bottom: 10px;
     font-size: rem-calc(14);
-    list-style-type: square;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  ul {
+    li {
+      list-style-type: square;
+    }
+  }
+  ol {
+    li {
+      list-style-type: decimal;
+      > ol {
+        li {
+          list-style-type: lower-latin;
+        }
+      }
+      > ul {
+        li {
+          list-style-type: square;
+        }
+      }
     }
   }
   a {
@@ -146,7 +165,6 @@
     margin-left: 16px;
     margin-bottom: 10px;
     font-size: rem-calc(14);
-    list-style-type: square;
     &:last-child {
       margin-bottom: 0;
     }

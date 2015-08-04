@@ -2,3 +2,47 @@
 
 /* buttons
 /* ---------------------------------------- */
+/* for editor style */
+.entry-content {
+  .btn {
+    @include buttonBase(rem-calc(14), lighten($colorLink, 24%));
+    font-size: rem-calc(16);
+  }
+  .btnFull {
+    @include buttonBase(rem-calc(14), lighten($colorLink, 24%), true);
+    font-size: rem-calc(16);
+  }
+  .btnGroup {
+    margin: 20px 0;
+    margin-left: 0;
+    &__btn {
+      @include buttonBase(rem-calc(14), lighten($colorLink, 24%), true);
+      margin-bottom: 0;
+      font-size: rem-calc(16);
+    }
+    > li {
+      margin-left: 0;
+      list-style-type: none;
+    }
+  }
+}
+/* media */
+@media #{$medium-up} {
+  .entry-content {
+    .btnGroup {
+      @include button-group-container();
+      margin: 30px 0;
+      > li {
+        @include button-group-style(
+          $even: 2,
+          $float: left
+        );
+        list-style-type: none;
+        border-right: 2px solid $colorWhite;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

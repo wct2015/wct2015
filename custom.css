@@ -8908,7 +8908,7 @@ The `sprites` mixin generates identical output to the CSS template
   }
   .menu-item a {
     color: #ffffff;
-    transition: 0.2s;
+    transition: 0.3s;
   }
   .menu-item a:hover {
     color: #222222;

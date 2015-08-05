@@ -16,7 +16,6 @@
   position: relative;
   // wapuu
   &:after {
-    @extend %slideIn;
     @extend %hovering;
     @include imageReplace('08/wapuu.png', 426px, 562px, .5);
     padding-top: 94px;
@@ -94,11 +93,25 @@
 @media #{$xlarge-up} {
   .site-header {
     background-size: cover;
+    &:after {
+      right: 18%;
+    }
   }
   .site-title {
     a {
       max-width: 800px;
       height: 680px;
+    }
+  }
+}
+@media #{$xxlarge-up} {
+  .site-header {
+    background-image: url($filePath + '08/bg_header_xLarge.jpg');
+  }
+  .site-title {
+    a {
+      max-width: 900px;
+      height: 740px;
     }
   }
 }

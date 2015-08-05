@@ -125,17 +125,6 @@ table {
 /* Table */
 /* clearfix */
 .site-header:after {
-  -webkit-animation-name: slideIn;
-  animation-name: slideIn;
-  -webkit-animation-duration: 6s;
-  animation-duration: 6s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
-.site-header:after {
   -webkit-animation-name: slideIn, hovering;
   animation-name: slideIn, hovering;
   -webkit-animation-duration: 2s, 3s;
@@ -183,8 +172,8 @@ table {
 }
 @-webkit-keyframes slideIn {
   0% {
-    -webkit-transform: translate(-1920px, 0);
-    transform: translate(-1920px, 0);
+    -webkit-transform: translate(0, -600px);
+    transform: translate(0, -600px);
   }
   100% {
     -webkit-transform: translate(0, 0);
@@ -193,8 +182,8 @@ table {
 }
 @keyframes slideIn {
   0% {
-    -webkit-transform: translate(-1920px, 0);
-    transform: translate(-1920px, 0);
+    -webkit-transform: translate(0, -600px);
+    transform: translate(0, -600px);
   }
   100% {
     -webkit-transform: translate(0, 0);
@@ -8812,10 +8801,23 @@ The `sprites` mixin generates identical output to the CSS template
   .site-header {
     background-size: cover;
   }
+  .site-header:after {
+    right: 18%;
+  }
 
   .site-title a {
     max-width: 800px;
     height: 680px;
+  }
+}
+@media only screen and (min-width: 120.0625em) {
+  .site-header {
+    background-image: url("files/2015/08/bg_header_xLarge.jpg");
+  }
+
+  .site-title a {
+    max-width: 900px;
+    height: 740px;
   }
 }
 /* navigation

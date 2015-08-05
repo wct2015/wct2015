@@ -16,7 +16,6 @@
   position: relative;
   // wapuu
   &:after {
-    @extend %slideIn;
     @extend %hovering;
     @include imageReplace('08/wapuu.png', 426px, 562px, .5);
     padding-top: 94px;
@@ -94,11 +93,25 @@
 @media #{$xlarge-up} {
   .site-header {
     background-size: cover;
+    &:after {
+      right: 18%;
+    }
   }
   .site-title {
     a {
       max-width: 800px;
       height: 680px;
+    }
+  }
+}
+@media #{$xxlarge-up} {
+  .site-header {
+    background-image: url($filePath + '08/bg_header_xLarge.jpg');
+  }
+  .site-title {
+    a {
+      max-width: 900px;
+      height: 740px;
     }
   }
 }
@@ -122,7 +135,7 @@
 .main-small-navigation {
   width: 100%;
   margin: 0;
-  background-color: $colorWhite;
+  background-color: $colorNavLighten;
 }
 .menu {
   margin: 10px;
@@ -130,7 +143,7 @@
     display: block;
     padding: $navPadding;
     line-height: 1.0;
-    color: $colorBlack;
+    color: $colorWhite;
     font-size: rem-calc(14);
   }
   &-item {
@@ -139,7 +152,7 @@
   }
 }
 .sub-menu {
-  background-color: $colorWhite;
+  background-color: $colorNavLighten;
   li {
     min-height: $navHeight;
     margin: 0 10px;
@@ -148,7 +161,7 @@
       border-bottom: none;
     }
     a {
-      color: lighten($colorBlue, 10%);
+      color: $colorWhite;
     }
   }
 }
@@ -177,9 +190,10 @@
       border-bottom: none;
       a {
         color: #ffffff;
-        transition: 0.2s;
+        transition: 0.3s;
         &:hover {
-          background-color: lighten($colorNav, 20%);
+          color: $colorBlack;
+          background-color: $colorWhite;
         }
       }
     }
@@ -196,11 +210,12 @@
     li {
       margin: 0;
       a {
-        // color: lighten($colorBlue, 10%);
+        color: $colorWhite;
+        background-color: $colorNavLighten;
         transition: 0.2s;
         &:hover {
-          border-left: 2px solid $colorBlue;
-          background-color: $colorWhite;
+          color: $colorWhite;
+          background-color: $colorNav;
         }
       }
     }

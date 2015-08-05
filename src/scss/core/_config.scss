@@ -11,6 +11,7 @@ $colorBlue          : #0b346e;
 $colorOrange        : #e07b15;
 $colorRed           : #c3322c;
 
+// Sponsor
 $colorAccomplice    : #3094d1;
 $colorGold          : #c19534;
 $colorSilver        : #d3d3d3;
@@ -26,6 +27,7 @@ $colorSelection     : lighten($colorLink, 50%);
 
 // navigation
 $colorNav           : $colorBlack;
+$colorNavLighten    : lighten($colorBlack, 8%);
 
 //***********************
 // Path

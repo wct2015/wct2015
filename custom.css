@@ -8841,7 +8841,7 @@ The `sprites` mixin generates identical output to the CSS template
 .main-small-navigation {
   width: 100%;
   margin: 0;
-  background-color: #ffffff;
+  background-color: #363636;
 }
 
 .menu {
@@ -8851,7 +8851,7 @@ The `sprites` mixin generates identical output to the CSS template
   display: block;
   padding: 14px;
   line-height: 1.0;
-  color: #222222;
+  color: #ffffff;
   font-size: 0.875rem;
 }
 .menu-item {
@@ -8860,7 +8860,7 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 .sub-menu {
-  background-color: #ffffff;
+  background-color: #363636;
 }
 .sub-menu li {
   min-height: 40px;
@@ -8871,7 +8871,7 @@ The `sprites` mixin generates identical output to the CSS template
   border-bottom: none;
 }
 .sub-menu li a {
-  color: #104a9c;
+  color: #ffffff;
 }
 
 /* media */
@@ -8911,7 +8911,8 @@ The `sprites` mixin generates identical output to the CSS template
     transition: 0.2s;
   }
   .menu-item a:hover {
-    background-color: #555555;
+    color: #222222;
+    background-color: #ffffff;
   }
   .menu-item-type-custom > a {
     margin-right: 0;
@@ -8921,11 +8922,13 @@ The `sprites` mixin generates identical output to the CSS template
     margin: 0;
   }
   .sub-menu li a {
+    color: #ffffff;
+    background-color: #363636;
     transition: 0.2s;
   }
   .sub-menu li a:hover {
-    border-left: 2px solid #0b346e;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #222222;
   }
 }
 /* layout

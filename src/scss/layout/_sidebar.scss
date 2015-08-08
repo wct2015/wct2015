@@ -10,7 +10,7 @@
     margin: 0;
     &-title {
       margin-top: 10px;
-      margin-bottom: 0;
+      margin-bottom: 10px;
       padding-bottom: 5px;
       border-bottom: 2px solid lighten($colorOrange, 40%);
       font-size: rem-calc(16);

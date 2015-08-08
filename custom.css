@@ -9109,6 +9109,9 @@ footer.entry-meta a {
   color: #c19534;
   font-weight: bold;
 }
+footer.entry-meta a:hover {
+  color: #d2ab56;
+}
 
 /* media */
 @media only screen and (min-width: 40.0625em) {
@@ -9202,7 +9205,7 @@ footer.entry-meta a {
 }
 #primary-sidebar .widget-title {
   margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 2px solid #fae1c7;
   font-size: 1rem;

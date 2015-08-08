@@ -92,6 +92,8 @@ footer.entry-meta {
   position: relative;
   margin: 40px auto 120px auto;
   padding: 0 20px;
+  color: $colorGold;
+  font-size: rem-calc(14);
   &:after {
     position: absolute;
     top: 30px;
@@ -107,11 +109,12 @@ footer.entry-meta {
     background-repeat: no-repeat;
     content: "";
   }
-  color: $colorGold;
-  font-size: rem-calc(14);
   a {
     color: $colorGold;
     font-weight: bold;
+    &:hover {
+      color: lighten($colorGold, 10%);
+    }
   }
 }
 /* media */

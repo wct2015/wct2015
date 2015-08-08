@@ -42,14 +42,15 @@
 article.post,
 article.page {
   background-color: $colorWhite;
-  border: 1px solid lighten($colorSilver, 13%);
+  border: 1px solid lighten($colorSilver, 10%);
   border-top: 2px solid $colorBlue;
+  border-bottom: 6px solid $colorBlue;
 }
 .entry-header {
   padding-top: 10px;
   .entry-meta {
     padding: 0 20px 10px 20px;
-    background: lighten($colorGold, 20%);
+    background: lighten($colorGold, 5%);
     color: $colorWhite;
     font-size: rem-calc(12);
     line-height: 1;
@@ -74,7 +75,7 @@ article.page {
   margin-bottom: 0;
   padding: 0 20px;
   padding-bottom: 20px;
-  border-bottom: 10px solid lighten($colorGold, 20%);
+  border-bottom: 10px solid lighten($colorGold, 5%);
   line-height: 1.4;
   font-size: rem-calc(20);
   a {
@@ -88,13 +89,32 @@ article.page {
   padding: 0 20px;
 }
 footer.entry-meta {
-  margin: 40px auto;
+  position: relative;
+  margin: 40px auto 120px auto;
   padding: 0 20px;
   color: $colorGold;
   font-size: rem-calc(14);
+  &:after {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 130px;
+    background-image: url($filePath + '08/img_entryFooter.png');
+    background-size: 120px auto;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    content: "";
+  }
   a {
     color: $colorGold;
     font-weight: bold;
+    &:hover {
+      color: lighten($colorGold, 10%);
+    }
   }
 }
 /* media */
@@ -105,7 +125,7 @@ footer.entry-meta {
     background-repeat: repeat-x;
     background-position: 0 0;
     background-size: 20px auto;
-    border-top: none;
+    border-top: 4px solid $colorBlue;
   }
   .entry-header {
     position: relative;
@@ -126,6 +146,15 @@ footer.entry-meta {
     padding-bottom: 14px;
     font-size: rem-calc(28);
     line-height: 1.5;
+  }
+  footer.entry-meta {
+    margin: 40px auto 160px auto;
+    &:after {
+      width: 160px;
+      height: auto;
+      padding-bottom: 150px;
+      background-size: 160px auto;
+    }
   }
 }
 @media #{$large-up} {

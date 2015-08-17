@@ -8985,10 +8985,6 @@ body {
 /* ---------------------------------------- */
 /* post archive
 /* ---------------------------------------- */
-.hentry {
-  margin-bottom: 40px;
-}
-
 /* page-header */
 .page-header {
   margin-bottom: 20px;
@@ -9017,7 +9013,7 @@ body {
 
 #nav-below {
   margin: 20px 0;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 #nav-below a {
   font-size: 0.75rem;
@@ -9027,11 +9023,18 @@ body {
     font-size: 0.875rem;
   }
 }
+#nav-below .nav-previous,
+#nav-below .nav-next {
+  padding: 0 10px;
+}
+#nav-below .nav-next {
+  border-left: 4px solid #ffffff;
+}
 
 /* post
 /* ---------------------------------------- */
-article.post,
-article.page {
+.hentry {
+  margin-bottom: 40px;
   background-color: #ffffff;
   border: 1px solid #ededed;
   border-top: 2px solid #0b346e;
@@ -9066,8 +9069,7 @@ article.page {
 .entry-title {
   margin-top: 10px;
   margin-bottom: 0;
-  padding: 0 20px;
-  padding-bottom: 20px;
+  padding: 0 20px 20px 20px;
   border-bottom: 10px solid #cca142;
   line-height: 1.4;
   font-size: 1.25rem;
@@ -9115,13 +9117,12 @@ footer.entry-meta a:hover {
 
 /* media */
 @media only screen and (min-width: 40.0625em) {
-  article.post,
-  article.page {
+  .hentry {
     background-image: url("files/2015/08/bg_entryHeader.png");
     background-repeat: repeat-x;
     background-position: 0 0;
     background-size: 20px auto;
-    border-top: 4px solid #0b346e;
+    border-top: 6px solid #0b346e;
   }
 
   .entry-header {
@@ -9141,6 +9142,7 @@ footer.entry-meta a:hover {
 
   .entry-title {
     margin-top: 34px;
+    padding-right: 60px;
     padding-bottom: 14px;
     font-size: 1.75rem;
     line-height: 1.5;
@@ -9178,6 +9180,7 @@ footer.entry-meta a:hover {
 
   .entry-title {
     font-size: 2rem;
+    padding-right: 66px;
   }
 }
 /* page-links */

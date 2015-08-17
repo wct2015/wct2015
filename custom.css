@@ -9205,6 +9205,11 @@ footer.entry-meta a:hover {
   font-size: 1.125rem;
 }
 
+/* hiddden eyecatch */
+.attachment-post-thumbnail {
+  display: none;
+}
+
 /* sidebar
 /* ---------------------------------------- */
 #primary-sidebar {

@@ -8076,6 +8076,50 @@ th.hide-for-touch {
     display: none !important;
   }
 }
+/* after header widgets
+/* ---------------------------------------- */
+.widgetRegister {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  background-color: #ffffff;
+  background-image: url("files/2015/08/bg_afterHeader.png");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: 34px auto;
+  border: 1px solid #ededed;
+}
+.widgetRegister:before, .widgetRegister:after {
+  content: " ";
+  display: table;
+}
+.widgetRegister:after {
+  clear: both;
+}
+.widgetRegister__title {
+  margin-top: 20px;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #c19534;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.widgetRegister__text {
+  margin: 20px 0;
+  font-size: 0.875rem;
+}
+
+/* media */
+@media only screen and (max-width: 40em) {
+  .widgetRegister {
+    padding: 40px 10px;
+  }
+  .widgetRegister__text {
+    text-align: left;
+  }
+}
 /* buttons
 /* ---------------------------------------- */
 /* for editor style */
@@ -8222,7 +8266,56 @@ th.hide-for-touch {
   list-style-type: none;
 }
 
+/* register */
+.btnRegister {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  font-size: 0.8125rem;
+  background-color: #ea851f;
+  border-color: #c26b12;
+  color: #ffffff;
+  transition: background-color 300ms ease-out;
+  box-shadow: 0 2px 0 #c46c12;
+  font-size: 1rem;
+  position: static;
+}
+.btnRegister:hover, .btnRegister:focus {
+  background-color: #c26b12;
+}
+.btnRegister:hover, .btnRegister:focus {
+  color: #ffffff;
+}
+.btnRegister:focus {
+  outline: none;
+}
+.btnRegister:link, .btnRegister:visited {
+  color: #ffffff;
+}
+.btnRegister:hover, .btnRegister:active, .btnRegister:focus {
+  outline: 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /* media */
+@media only screen and (max-width: 40em) {
+  .btnRegister {
+    font-size: 0.875rem;
+  }
+}
 @media only screen and (min-width: 40.0625em) {
   .entry-content .btnGroup {
     list-style: none;

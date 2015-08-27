@@ -26,7 +26,17 @@
     }
   }
 }
+/* register */
+.btnRegister {
+  @include buttonBase(rem-calc(14), lighten($colorOrange, 4%), false);
+  font-size: rem-calc(16);
+}
 /* media */
+@media #{$small-only} {
+  .btnRegister {
+    font-size: rem-calc(14);
+  }
+}
 @media #{$medium-up} {
   .entry-content {
     .btnGroup {

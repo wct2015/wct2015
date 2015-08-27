@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/* attendees
+/* ---------------------------------------- */
+
+.page-id-535,
+.page-id-2338,
+.page-id-2130 {
+  #primary {
+    @include grid-row();
+  }
+  #secondary {
+    display: none;
+  }
+}

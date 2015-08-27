@@ -8122,6 +8122,70 @@ th.hide-for-touch {
 }
 /* buttons
 /* ---------------------------------------- */
+html input[type="button"],
+html input[type="reset"],
+html input[type="submit"] {
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  font-size: 0.8125rem;
+  background-color: #ea851f;
+  border-color: #c26b12;
+  color: #ffffff;
+  transition: background-color 300ms ease-out;
+  box-shadow: 0 2px 0 #c46c12;
+}
+html input[type="button"]:hover, html input[type="button"]:focus,
+html input[type="reset"]:hover,
+html input[type="reset"]:focus,
+html input[type="submit"]:hover,
+html input[type="submit"]:focus {
+  background-color: #c26b12;
+}
+html input[type="button"]:hover, html input[type="button"]:focus,
+html input[type="reset"]:hover,
+html input[type="reset"]:focus,
+html input[type="submit"]:hover,
+html input[type="submit"]:focus {
+  color: #ffffff;
+}
+html input[type="button"]:focus,
+html input[type="reset"]:focus,
+html input[type="submit"]:focus {
+  outline: none;
+}
+html input[type="button"]:link, html input[type="button"]:visited,
+html input[type="reset"]:link,
+html input[type="reset"]:visited,
+html input[type="submit"]:link,
+html input[type="submit"]:visited {
+  color: #ffffff;
+}
+html input[type="button"]:hover, html input[type="button"]:active, html input[type="button"]:focus,
+html input[type="reset"]:hover,
+html input[type="reset"]:active,
+html input[type="reset"]:focus,
+html input[type="submit"]:hover,
+html input[type="submit"]:active,
+html input[type="submit"]:focus {
+  outline: 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /* for editor style */
 .entry-content .btn {
   -webkit-appearance: none;
@@ -8667,6 +8731,34 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
+/* attendees
+/* ---------------------------------------- */
+.page-id-535 #primary,
+.page-id-2338 #primary,
+.page-id-2130 #primary {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+}
+.page-id-535 #primary:before, .page-id-535 #primary:after,
+.page-id-2338 #primary:before,
+.page-id-2338 #primary:after,
+.page-id-2130 #primary:before,
+.page-id-2130 #primary:after {
+  content: " ";
+  display: table;
+}
+.page-id-535 #primary:after,
+.page-id-2338 #primary:after,
+.page-id-2130 #primary:after {
+  clear: both;
+}
+.page-id-535 #secondary,
+.page-id-2338 #secondary,
+.page-id-2130 #secondary {
+  display: none;
+}
+
 /* featured
 /* ---------------------------------------- */
 .featured {

@@ -2,6 +2,14 @@
 
 /* buttons
 /* ---------------------------------------- */
+html {
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    background: transparent;
+    @include buttonBase(rem-calc(14), lighten($colorOrange, 4%), false);
+  }
+}
 /* for editor style */
 .entry-content {
   .btn {

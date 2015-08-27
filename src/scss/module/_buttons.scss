@@ -30,6 +30,7 @@
 .btnRegister {
   @include buttonBase(rem-calc(14), lighten($colorOrange, 4%), false);
   font-size: rem-calc(16);
+  position: static;
 }
 /* media */
 @media #{$small-only} {

@@ -8290,6 +8290,7 @@ th.hide-for-touch {
   transition: background-color 300ms ease-out;
   box-shadow: 0 2px 0 #c46c12;
   font-size: 1rem;
+  position: static;
 }
 .btnRegister:hover, .btnRegister:focus {
   background-color: #c26b12;

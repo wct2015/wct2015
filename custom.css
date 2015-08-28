@@ -8477,8 +8477,29 @@ html input[type="submit"]:focus {
   .tix_tickets_table .tix-column-quantity select {
     margin: 5px 0;
   }
-}
 
+  .tix-order-summary td.tix-column-description {
+    display: block;
+    width: 100%;
+  }
+
+  .tix-attendee-form tr td.tix-left {
+    display: block;
+    width: 100%;
+  }
+  .tix-attendee-form tr td.tix-right {
+    display: block;
+    width: 100%;
+  }
+
+  .tix-ticket-form thead {
+    display: none;
+  }
+  .tix-ticket-form td {
+    display: block;
+    width: 100%;
+  }
+}
 /* captions
 /* ---------------------------------------- */
 .wp-caption {

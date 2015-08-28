@@ -2,8 +2,8 @@
 
 /* camptix
 /* ---------------------------------------- */
-.tix_tickets_table {
-  @media #{$small-only} {
+@media #{$small-only} {
+  .tix_tickets_table {
     thead {
       display: none;
     }
@@ -32,6 +32,33 @@
       select {
         margin: 5px 0;
       }
+    }
+  }
+  .tix-order-summary {
+    td.tix-column-description {
+      display: block;
+      width: 100%;
+    }
+  }
+  .tix-attendee-form {
+    tr {
+      td.tix-left {
+        display: block;
+        width: 100% ;
+      }
+      td.tix-right {
+        display: block;
+        width: 100% ;
+      }
+    }
+  }
+  .tix-ticket-form {
+    thead {
+      display: none;
+    }
+    td {
+      display: block;
+      width: 100%;
     }
   }
 }

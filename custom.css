@@ -8146,6 +8146,7 @@ html input[type="submit"] {
   border-color: #c26b12;
   color: #ffffff;
   transition: background-color 300ms ease-out;
+  position: static;
   box-shadow: 0 2px 0 #c46c12;
   text-shadow: none;
   letter-spacing: 0.8px;
@@ -8235,6 +8236,7 @@ html input[type="submit"]:focus {
   border-color: #c26b12;
   color: #ffffff;
   transition: background-color 300ms ease-out;
+  position: static;
   box-shadow: 0 2px 0 #c46c12;
   font-size: 1rem;
 }
@@ -8281,6 +8283,7 @@ html input[type="submit"]:focus {
   border-color: #c26b12;
   color: #ffffff;
   transition: background-color 300ms ease-out;
+  position: static;
   box-shadow: 0 2px 0 #c46c12;
   font-size: 1rem;
 }
@@ -8331,6 +8334,7 @@ html input[type="submit"]:focus {
   border-color: #c26b12;
   color: #ffffff;
   transition: background-color 300ms ease-out;
+  position: static;
   box-shadow: 0 2px 0 #c46c12;
   margin-bottom: 0;
   font-size: 1rem;
@@ -8379,6 +8383,7 @@ html input[type="submit"]:focus {
   border-color: #c26b12;
   color: #ffffff;
   transition: background-color 300ms ease-out;
+  position: static;
   box-shadow: 0 2px 0 #c46c12;
   font-size: 1rem;
   position: static;

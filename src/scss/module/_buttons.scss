@@ -7,7 +7,25 @@ html {
   input[type="reset"],
   input[type="submit"] {
     background: transparent;
-    @include buttonBase(rem-calc(14), lighten($colorOrange, 4%), false);
+    @include buttonBase(rem-calc(16), lighten($colorOrange, 4%), false);
+    text-shadow: none;
+    letter-spacing: 0.8px;
+    transition: 0.3s all;
+    &:focus {
+      outline: thin dotted;
+    }
+    &:link,
+    &:visited {
+      color: $colorLink;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      outline: 0;
+      background: transparent;
+      background-color: darken($colorOrange, 10%);
+      text-decoration: none;
+    }
   }
 }
 /* for editor style */

@@ -8140,13 +8140,16 @@ html input[type="submit"] {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
-  font-size: 0.8125rem;
+  padding: 1rem 2rem 1.0625rem 2rem;
+  font-size: 1rem;
   background-color: #ea851f;
   border-color: #c26b12;
   color: #ffffff;
   transition: background-color 300ms ease-out;
   box-shadow: 0 2px 0 #c46c12;
+  text-shadow: none;
+  letter-spacing: 0.8px;
+  transition: 0.3s all;
 }
 html input[type="button"]:hover, html input[type="button"]:focus,
 html input[type="reset"]:hover,
@@ -8183,6 +8186,30 @@ html input[type="submit"]:active,
 html input[type="submit"]:focus {
   outline: 0;
   color: #ffffff;
+  text-decoration: none;
+}
+html input[type="button"]:focus,
+html input[type="reset"]:focus,
+html input[type="submit"]:focus {
+  outline: thin dotted;
+}
+html input[type="button"]:link, html input[type="button"]:visited,
+html input[type="reset"]:link,
+html input[type="reset"]:visited,
+html input[type="submit"]:link,
+html input[type="submit"]:visited {
+  color: #104a9c;
+}
+html input[type="button"]:hover, html input[type="button"]:active, html input[type="button"]:focus,
+html input[type="reset"]:hover,
+html input[type="reset"]:active,
+html input[type="reset"]:focus,
+html input[type="submit"]:hover,
+html input[type="submit"]:active,
+html input[type="submit"]:focus {
+  outline: 0;
+  background: transparent;
+  background-color: #b16111;
   text-decoration: none;
 }
 
@@ -8757,6 +8784,31 @@ The `sprites` mixin generates identical output to the CSS template
 .page-id-2338 #secondary,
 .page-id-2130 #secondary {
   display: none;
+}
+
+/* camptix_attendees */
+.entry-content #tix-attendees .tix-columns-3 li {
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #ededed;
+  margin-left: 0;
+  list-style-type: none;
+}
+@media only screen and (min-width: 40.0625em) {
+  .entry-content #tix-attendees .tix-columns-3 li {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  .entry-content #tix-attendees .tix-columns-3 li {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left;
+  }
 }
 
 /* featured

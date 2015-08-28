@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* camptix
+/* ---------------------------------------- */
+.tix_tickets_table {
+  @media #{$small-only} {
+    thead {
+      display: none;
+    }
+    td {
+      display: block;
+      &:before {
+        display: block;
+        color: lighten($colorText, 30%);
+        font-size: rem-calc(12);
+      }
+    }
+    .tix-column-price {
+      &:before {
+        content: "価格 / Price";
+      }
+    }
+    .tix-column-remaining {
+      &:before {
+        content: "残数 / Remaining";
+      }
+    }
+    .tix-column-quantity {
+      &:before {
+        content: "数 / Quantity";
+      }
+      select {
+        margin: 5px 0;
+      }
+    }
+  }
+}

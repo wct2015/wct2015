@@ -3,6 +3,12 @@
  * tokyo.wordcamp.org/2015/
  * custom css
  */
+/* fonts
+/* ---------------------------------------- */
+/* genericons */
+@import "https://tokyo.wordcamp.org/2015/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css";
+/* font awesome */
+@import "https://tokyo.wordcamp.org/2015/wp-content/plugins/tagregator/includes/font-awesome/css/font-awesome.min.css";
 /* default styles
 /* ---------------------------------------- */
 /* the root element */
@@ -124,6 +130,15 @@ table {
 /* columns */
 /* Table */
 /* clearfix */
+.entry-content .wcorg-speaker-description:after, .entry-content .wcorg-speaker-icons:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: ".";
+  font-size: 0;
+}
+
 .site-header:after {
   -webkit-animation-name: slideIn, hovering;
   animation-name: slideIn, hovering;
@@ -8764,6 +8779,129 @@ html input[type="submit"]:focus {
   display: block;
 }
 
+/* speakers
+/* ---------------------------------------- */
+.entry-content .wcorg-speaker {
+  margin: 40px 0;
+}
+.entry-content .wcorg-speaker h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.entry-content .wcorg-speaker .avatar {
+  display: block;
+  float: left;
+  border-radius: 50%;
+}
+.entry-content .wcorg-speaker-right {
+  min-height: 100px;
+  padding-left: 120px;
+  margin-bottom: 10px;
+}
+.entry-content .wcorg-speaker-right > * {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.entry-content .wcorg-speaker-belonging {
+  line-height: 1;
+}
+.entry-content .wcorg-speaker-icons {
+  height: 28px;
+}
+.entry-content .wcorg-speaker-icons li {
+  float: left;
+  margin-bottom: 0;
+  margin-left: 10px;
+  list-style-type: none;
+}
+.entry-content .wcorg-speaker-icons li:first-child {
+  margin-left: 0;
+}
+.entry-content .wcorg-speaker-icon {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.entry-content .wcorg-speaker-icon > i {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.75rem;
+}
+.entry-content .wcorg-speaker-icon > i.genericon-github {
+  color: #333333;
+  font-size: 1.75rem;
+  transition: 0.3s;
+}
+.entry-content .wcorg-speaker-icon > i.genericon-github:hover {
+  color: #4d4d4d;
+}
+.entry-content .wcorg-speaker-icon--tw {
+  background-color: #55acee;
+}
+.entry-content .wcorg-speaker-icon--tw:hover {
+  background-color: #83c3f3;
+}
+.entry-content .wcorg-speaker-icon--fb {
+  background-color: #3b5998;
+}
+.entry-content .wcorg-speaker-icon--fb:hover {
+  background-color: #4c70ba;
+}
+.entry-content .wcorg-speaker-url {
+  line-height: 1;
+}
+.entry-content .wcorg-speaker-info-session {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.entry-content .wcorg-speaker-info-session a {
+  font-size: 1.125rem;
+}
+.entry-content .wcorg-speaker-list {
+  margin-top: 0;
+}
+.entry-content .wcorg-speaker-list-item {
+  margin-left: 0;
+  list-style: none;
+  line-height: 1;
+}
+.entry-content .wcorg-speaker-list-item--stage:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-family: 'Genericons';
+  line-height: 1em;
+  font-size: 1rem;
+}
+.entry-content .wcorg-speaker-list-item--time:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-family: 'Genericons';
+  line-height: 1em;
+  font-size: 1rem;
+}
+
+/* media */
+@media only screen and (max-width: 40em) {
+  .entry-content .wcorg-speaker {
+    margin: 20px 0;
+  }
+  .entry-content .wcorg-speaker-right {
+    min-height: 70px;
+    padding-left: 90px;
+  }
+  .entry-content .wcorg-speaker .avatar {
+    width: 70px;
+    height: auto;
+  }
+}
 /* media
 /* ---------------------------------------- */
 .page-content .wp-smiley,

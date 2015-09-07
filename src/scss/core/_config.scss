@@ -29,6 +29,14 @@ $colorSelection     : lighten($colorLink, 50%);
 $colorNav           : $colorBlack;
 $colorNavLighten    : lighten($colorBlack, 8%);
 
+// icons
+$colorTw            : #55acee;
+$colorTwHover       : lighten($colorTw, 10%);
+$colorFb            : #3b5998;
+$colorFbHover       : lighten($colorFb, 10%);
+$colorGh            : #333333;
+$colorGhHover       : lighten($colorGh, 10%);
+
 //***********************
 // Path
 //***********************

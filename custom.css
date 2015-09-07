@@ -8950,6 +8950,21 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
+/* 404
+/* ---------------------------------------- */
+body.error404 #primary {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+}
+body.error404 #primary:before, body.error404 #primary:after {
+  content: " ";
+  display: table;
+}
+body.error404 #primary:after {
+  clear: both;
+}
+
 /* attendees
 /* ---------------------------------------- */
 .page-id-535 #primary,
@@ -9462,7 +9477,7 @@ body {
 
 /* post
 /* ---------------------------------------- */
-.hentry {
+.hentry, body.error404 .not-found {
   margin-bottom: 40px;
   background-color: #ffffff;
   border: 1px solid #ededed;
@@ -9546,11 +9561,11 @@ footer.entry-meta a:hover {
 
 /* media */
 @media only screen and (min-width: 40.0625em) {
-  .hentry {
-    background-image: url("files/2015/08/bg_entryHeader.png");
+  .hentry, body.error404 .not-found {
+    background-image: url("files/2015/09/bg_afterHeader.png");
     background-repeat: repeat-x;
     background-position: 0 0;
-    background-size: 20px auto;
+    background-size: 30px auto;
     border-top: 6px solid #0b346e;
   }
 

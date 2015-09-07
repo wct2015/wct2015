@@ -123,10 +123,10 @@ footer.entry-meta {
 /* media */
 @media #{$medium-up} {
   .hentry {
-    background-image: url($filePath + '08/bg_entryHeader.png');
+    background-image: url($filePath + '09/bg_afterHeader.png');
     background-repeat: repeat-x;
     background-position: 0 0;
-    background-size: 20px auto;
+    background-size: 30px auto;
     border-top: 6px solid $colorBlue;
   }
   .entry-header {

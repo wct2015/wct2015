@@ -112,12 +112,12 @@
       li {
         @include grid-column( $columns: 12 );
         // media
-        // @media #{$medium-up} {
-        //   @include grid-column(
-        //     $columns: 6,
-        //     $collapse: false
-        //   );
-        // }
+        @media #{$medium-up} {
+          @include grid-column(
+            $columns: 6,
+            $collapse: false
+          );
+        }
         a {
           max-width: 450px;
           margin: 10px auto;

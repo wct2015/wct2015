@@ -9862,6 +9862,14 @@ footer.entry-meta a:hover {
   width: 100%;
   float: left;
 }
+@media only screen and (min-width: 40.0625em) {
+  .sponsors__list--gold li {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+  }
+}
 .sponsors__list--gold li a {
   max-width: 450px;
   margin: 10px auto;

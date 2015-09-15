@@ -138,7 +138,7 @@
   background-color: $colorNavLighten;
 }
 .menu {
-  margin: 10px;
+  margin: 0 10px;
   a {
     display: block;
     padding: $navPadding;
@@ -148,18 +148,19 @@
   }
   &-item {
     min-height: $navHeight;
-    border-bottom: 1px solid lighten($colorNav, 50%);
+    border-top: 1px solid lighten($colorNav, 50%);
+  }
+  >li {
+    &:first-child {
+      border-top: none;
+    }
   }
 }
 .sub-menu {
   background-color: $colorNavLighten;
   li {
     min-height: $navHeight;
-    margin: 0 10px;
-    border-bottom: 1px dotted lighten($colorNav, 50%);
-    &:last-child {
-      border-bottom: none;
-    }
+    border-top: 1px dotted lighten($colorNav, 50%);
     a {
       color: $colorWhite;
     }
@@ -196,9 +197,6 @@
           background-color: $colorWhite;
         }
       }
-    }
-    &-item-has-children {
-      > a {}
     }
     &-item-type-custom {
       > a {

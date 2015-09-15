@@ -8145,7 +8145,7 @@ html input[type="submit"] {
   border-radius: 0;
   text-shadow: none;
   display: inline-block;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
   box-shadow: 0 3px 0 #d67614;
@@ -8206,7 +8206,7 @@ html input[type="submit"]:focus {
 /* for editor style */
 .entry-content .btn {
   display: inline-block;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
   box-shadow: 0 3px 0 #d67614;
@@ -8230,7 +8230,7 @@ html input[type="submit"]:focus {
 }
 .entry-content .btnFull {
   display: inline-block;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
   box-shadow: 0 3px 0 #d67614;
@@ -8259,7 +8259,7 @@ html input[type="submit"]:focus {
 }
 .entry-content .btnGroup__btn {
   display: inline-block;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
   box-shadow: 0 3px 0 #d67614;
@@ -8291,7 +8291,7 @@ html input[type="submit"]:focus {
 /* register */
 a.btnRegister {
   display: inline-block;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
   box-shadow: 0 3px 0 #d67614;
@@ -8308,6 +8308,70 @@ a.btnRegister:link, a.btnRegister:visited {
 }
 a.btnRegister:hover, a.btnRegister:active, a.btnRegister:focus {
   background-color: #cd7113;
+  color: #ffffff;
+  outline: 0;
+  text-decoration: none;
+}
+
+/* sns */
+.btnFollow {
+  line-height: 1;
+  letter-spacing: 0.7px;
+}
+.btnFollow i[class^="genericon-"],
+.btnFollow i[class*=" genericon-"] {
+  vertical-align: bottom;
+  margin-right: 5px;
+  line-height: 1;
+}
+.btnFollow--tw {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 3px 0 #399eeb;
+  background-color: #55acee;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: background-color 300ms ease-out;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.btnFollow--tw:focus {
+  outline: 0;
+}
+.btnFollow--tw:link, .btnFollow--tw:visited {
+  color: #ffffff;
+}
+.btnFollow--tw:hover, .btnFollow--tw:active, .btnFollow--tw:focus {
+  background-color: #309aea;
+  color: #ffffff;
+  outline: 0;
+  text-decoration: none;
+}
+.btnFollow--fb {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 3px 0 #324c82;
+  background-color: #3b5998;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: background-color 300ms ease-out;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.btnFollow--fb:focus {
+  outline: 0;
+}
+.btnFollow--fb:link, .btnFollow--fb:visited {
+  color: #ffffff;
+}
+.btnFollow--fb:hover, .btnFollow--fb:active, .btnFollow--fb:focus {
+  background-color: #30487b;
   color: #ffffff;
   outline: 0;
   text-decoration: none;
@@ -9181,7 +9245,7 @@ body.error404 #primary:after {
 }
 
 .menu {
-  margin: 10px;
+  margin: 0 10px;
 }
 .menu a {
   display: block;
@@ -9192,7 +9256,10 @@ body.error404 #primary:after {
 }
 .menu-item {
   min-height: 40px;
-  border-bottom: 1px solid #a2a2a2;
+  border-top: 1px solid #a2a2a2;
+}
+.menu > li:first-child {
+  border-top: none;
 }
 
 .sub-menu {
@@ -9200,11 +9267,7 @@ body.error404 #primary:after {
 }
 .sub-menu li {
   min-height: 40px;
-  margin: 0 10px;
-  border-bottom: 1px dotted #a2a2a2;
-}
-.sub-menu li:last-child {
-  border-bottom: none;
+  border-top: 1px dotted #a2a2a2;
 }
 .sub-menu li a {
   color: #ffffff;
@@ -9558,7 +9621,7 @@ footer.entry-meta a:hover {
 /* sidebar
 /* ---------------------------------------- */
 #primary-sidebar {
-  padding: 0 20px;
+  padding: 0 10px;
   background-color: #ffffff;
   border: 1px solid #ededed;
 }
@@ -9605,6 +9668,12 @@ footer.entry-meta a:hover {
   font-size: 0.75rem;
 }
 
+/* media */
+@media only screen and (min-width: 40.0625em) {
+  #primary-sidebar {
+    padding: 0 20px;
+  }
+}
 /* sponsors
 /* ---------------------------------------- */
 .sponsors {

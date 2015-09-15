@@ -58,6 +58,27 @@ html {
 a.btnRegister {
   @include buttonBase($colorOrange, rem-calc(16), $fullWidth: false);
 }
+/* sns */
+.btnFollow {
+  line-height: 1;
+  letter-spacing: 0.7px;
+  i[class^="genericon-"],
+  i[class*=" genericon-"] {
+    vertical-align: bottom;
+    margin-right: 5px;
+    line-height: 1;
+  }
+  &--tw {
+    @include buttonBase($colorTw, rem-calc(16), $fullWidth: true);
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  &--fb {
+    @include buttonBase($colorFb, rem-calc(16), $fullWidth: true);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 /* media */
 @media #{$small-only} {
   .btnRegister {

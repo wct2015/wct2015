@@ -2,7 +2,7 @@
 /* sidebar
 /* ---------------------------------------- */
 #primary-sidebar {
-  padding: 0 20px;
+  padding: 0 10px;
   background-color: $colorWhite;
   border: 1px solid lighten($colorSilver, 10%);
   .widget {
@@ -52,5 +52,11 @@
         font-size: rem-calc(12);
       }
     }
+  }
+}
+/* media */
+@media #{$medium-up} {
+  #primary-sidebar {
+    padding: 0 20px;
   }
 }

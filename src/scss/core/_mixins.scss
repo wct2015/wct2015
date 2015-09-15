@@ -141,29 +141,34 @@
 
 //***********************
 // button Base
-// ---
-// required foundation
 //***********************
-@mixin buttonBase($padding, $color, $fullWidth: false) {
-  @include button(
-    $padding: $padding,
-    $bg: $color,
-    $full-width: $fullWidth
-  );
-  position: static;
-  box-shadow: 0 2px 0 darken($color, 10%);
+@mixin buttonBase($color, $fontSize, $fullWidth: false) {
+  display: inline-block;
+  margin: 1.25rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 3px 0 darken($color, 6%);
+  background-color: $color;
+  color: #ffffff;
+  font-size: $fontSize;
+  transition: background-color 300ms ease-out;
+  // set $fullWidth
+  @if $fullWidth {
+    width: 100%;
+  }
   &:focus {
-      outline: none;
+    outline: 0;
   }
   &:link,
   &:visited {
-    color: $colorWhite;
+    color: #ffffff;
   }
   &:hover,
   &:active,
   &:focus {
+    background-color: darken($color, 8%);
+    color: #ffffff;
     outline: 0;
-    color: $colorWhite;
     text-decoration: none;
   }
 }

@@ -8141,50 +8141,23 @@ html input[type="button"],
 html input[type="reset"],
 html input[type="submit"] {
   background: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  border: none;
   border-radius: 0;
-  border-style: solid;
-  border-width: 0;
-  cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
-  font-weight: normal;
-  line-height: normal;
-  margin: 0 0 1.25rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  padding: 1rem 2rem 1.0625rem 2rem;
-  font-size: 1rem;
-  background-color: #ea851f;
-  border-color: #c26b12;
-  color: #ffffff;
-  transition: background-color 300ms ease-out;
-  position: static;
-  box-shadow: 0 2px 0 #c46c12;
   text-shadow: none;
-  letter-spacing: 0.8px;
-  transition: 0.3s all;
-}
-html input[type="button"]:hover, html input[type="button"]:focus,
-html input[type="reset"]:hover,
-html input[type="reset"]:focus,
-html input[type="submit"]:hover,
-html input[type="submit"]:focus {
-  background-color: #c26b12;
-}
-html input[type="button"]:hover, html input[type="button"]:focus,
-html input[type="reset"]:hover,
-html input[type="reset"]:focus,
-html input[type="submit"]:hover,
-html input[type="submit"]:focus {
+  display: inline-block;
+  margin: 1.25rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 3px 0 #d67614;
+  background-color: #ea851f;
   color: #ffffff;
+  font-size: 1rem;
+  transition: background-color 300ms ease-out;
 }
 html input[type="button"]:focus,
 html input[type="reset"]:focus,
 html input[type="submit"]:focus {
-  outline: none;
+  outline: 0;
 }
 html input[type="button"]:link, html input[type="button"]:visited,
 html input[type="reset"]:link,
@@ -8200,21 +8173,22 @@ html input[type="reset"]:focus,
 html input[type="submit"]:hover,
 html input[type="submit"]:active,
 html input[type="submit"]:focus {
-  outline: 0;
+  background: transparent;
   color: #ffffff;
+  outline: 0;
   text-decoration: none;
 }
 html input[type="button"]:focus,
 html input[type="reset"]:focus,
 html input[type="submit"]:focus {
-  outline: thin dotted;
+  outline: 0;
 }
 html input[type="button"]:link, html input[type="button"]:visited,
 html input[type="reset"]:link,
 html input[type="reset"]:visited,
 html input[type="submit"]:link,
 html input[type="submit"]:visited {
-  color: #104a9c;
+  color: #ffffff;
 }
 html input[type="button"]:hover, html input[type="button"]:active, html input[type="button"]:focus,
 html input[type="reset"]:hover,
@@ -8223,100 +8197,60 @@ html input[type="reset"]:focus,
 html input[type="submit"]:hover,
 html input[type="submit"]:active,
 html input[type="submit"]:focus {
+  background-color: #cd7113;
+  color: #ffffff;
   outline: 0;
-  background: transparent;
-  background-color: #b16111;
   text-decoration: none;
 }
 
 /* for editor style */
 .entry-content .btn {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 0;
-  border-style: solid;
-  border-width: 0;
-  cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
-  font-weight: normal;
-  line-height: normal;
-  margin: 0 0 1.25rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
+  margin: 1.25rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
-  font-size: 0.8125rem;
+  text-align: center;
+  box-shadow: 0 3px 0 #d67614;
   background-color: #ea851f;
-  border-color: #c26b12;
   color: #ffffff;
+  font-size: 0.875rem;
   transition: background-color 300ms ease-out;
-  position: static;
-  box-shadow: 0 2px 0 #c46c12;
   font-size: 1rem;
 }
-.entry-content .btn:hover, .entry-content .btn:focus {
-  background-color: #c26b12;
-}
-.entry-content .btn:hover, .entry-content .btn:focus {
-  color: #ffffff;
-}
 .entry-content .btn:focus {
-  outline: none;
+  outline: 0;
 }
 .entry-content .btn:link, .entry-content .btn:visited {
   color: #ffffff;
 }
 .entry-content .btn:hover, .entry-content .btn:active, .entry-content .btn:focus {
-  outline: 0;
+  background-color: #cd7113;
   color: #ffffff;
+  outline: 0;
   text-decoration: none;
 }
 .entry-content .btnFull {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 0;
-  border-style: solid;
-  border-width: 0;
-  cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
-  font-weight: normal;
-  line-height: normal;
-  margin: 0 0 1.25rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
+  margin: 1.25rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
-  font-size: 0.8125rem;
-  padding-bottom: 0.9375rem;
-  padding-top: 0.875rem;
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
+  text-align: center;
+  box-shadow: 0 3px 0 #d67614;
   background-color: #ea851f;
-  border-color: #c26b12;
   color: #ffffff;
+  font-size: 0.875rem;
   transition: background-color 300ms ease-out;
-  position: static;
-  box-shadow: 0 2px 0 #c46c12;
+  width: 100%;
   font-size: 1rem;
 }
-.entry-content .btnFull:hover, .entry-content .btnFull:focus {
-  background-color: #c26b12;
-}
-.entry-content .btnFull:hover, .entry-content .btnFull:focus {
-  color: #ffffff;
-}
 .entry-content .btnFull:focus {
-  outline: none;
+  outline: 0;
 }
 .entry-content .btnFull:link, .entry-content .btnFull:visited {
   color: #ffffff;
 }
 .entry-content .btnFull:hover, .entry-content .btnFull:active, .entry-content .btnFull:focus {
-  outline: 0;
+  background-color: #cd7113;
   color: #ffffff;
+  outline: 0;
   text-decoration: none;
 }
 .entry-content .btnGroup {
@@ -8324,51 +8258,29 @@ html input[type="submit"]:focus {
   margin-left: 0;
 }
 .entry-content .btnGroup__btn {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 0;
-  border-style: solid;
-  border-width: 0;
-  cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
-  font-weight: normal;
-  line-height: normal;
-  margin: 0 0 1.25rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
+  margin: 1.25rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
-  font-size: 0.8125rem;
-  padding-bottom: 0.9375rem;
-  padding-top: 0.875rem;
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
+  text-align: center;
+  box-shadow: 0 3px 0 #d67614;
   background-color: #ea851f;
-  border-color: #c26b12;
   color: #ffffff;
+  font-size: 0.875rem;
   transition: background-color 300ms ease-out;
-  position: static;
-  box-shadow: 0 2px 0 #c46c12;
+  width: 100%;
   margin-bottom: 0;
   font-size: 1rem;
 }
-.entry-content .btnGroup__btn:hover, .entry-content .btnGroup__btn:focus {
-  background-color: #c26b12;
-}
-.entry-content .btnGroup__btn:hover, .entry-content .btnGroup__btn:focus {
-  color: #ffffff;
-}
 .entry-content .btnGroup__btn:focus {
-  outline: none;
+  outline: 0;
 }
 .entry-content .btnGroup__btn:link, .entry-content .btnGroup__btn:visited {
   color: #ffffff;
 }
 .entry-content .btnGroup__btn:hover, .entry-content .btnGroup__btn:active, .entry-content .btnGroup__btn:focus {
-  outline: 0;
+  background-color: #cd7113;
   color: #ffffff;
+  outline: 0;
   text-decoration: none;
 }
 .entry-content .btnGroup > li {
@@ -8377,47 +8289,27 @@ html input[type="submit"]:focus {
 }
 
 /* register */
-.btnRegister {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 0;
-  border-style: solid;
-  border-width: 0;
-  cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
-  font-weight: normal;
-  line-height: normal;
-  margin: 0 0 1.25rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
+a.btnRegister {
   display: inline-block;
+  margin: 1.25rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
-  font-size: 0.8125rem;
+  text-align: center;
+  box-shadow: 0 3px 0 #d67614;
   background-color: #ea851f;
-  border-color: #c26b12;
   color: #ffffff;
-  transition: background-color 300ms ease-out;
-  position: static;
-  box-shadow: 0 2px 0 #c46c12;
   font-size: 1rem;
-  position: static;
+  transition: background-color 300ms ease-out;
 }
-.btnRegister:hover, .btnRegister:focus {
-  background-color: #c26b12;
-}
-.btnRegister:hover, .btnRegister:focus {
-  color: #ffffff;
-}
-.btnRegister:focus {
-  outline: none;
-}
-.btnRegister:link, .btnRegister:visited {
-  color: #ffffff;
-}
-.btnRegister:hover, .btnRegister:active, .btnRegister:focus {
+a.btnRegister:focus {
   outline: 0;
+}
+a.btnRegister:link, a.btnRegister:visited {
   color: #ffffff;
+}
+a.btnRegister:hover, a.btnRegister:active, a.btnRegister:focus {
+  background-color: #cd7113;
+  color: #ffffff;
+  outline: 0;
   text-decoration: none;
 }
 
@@ -8552,7 +8444,7 @@ html input[type="submit"]:focus {
   padding-bottom: 6px;
   font-size: 1.125rem;
   font-weight: bold;
-  border-bottom: 2px solid #fcebda;
+  border-bottom: 2px solid #fdf5ec;
 }
 .entry-content h3 {
   padding-bottom: 6px;
@@ -8660,7 +8552,7 @@ html input[type="submit"]:focus {
   }
   .entry-content h2 {
     font-size: 1.375rem;
-    border-bottom: 4px solid #fcebda;
+    border-bottom: 4px solid #fdf5ec;
   }
   .entry-content h3 {
     font-size: 1.25rem;
@@ -9382,6 +9274,11 @@ body {
   background-repeat: repeat;
   background-size: 64px 64px;
 }
+@media only screen and (max-width: 40em) {
+  body {
+    position: static;
+  }
+}
 
 #main {
   padding: 0 10px;
@@ -9674,7 +9571,7 @@ footer.entry-meta a:hover {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-bottom: 5px;
-  border-bottom: 2px solid #fae1c7;
+  border-bottom: 2px solid #fbebda;
   font-size: 1rem;
   font-weight: bold;
 }

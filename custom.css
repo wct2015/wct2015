@@ -9526,7 +9526,7 @@ footer.entry-meta a:hover {
     background-repeat: repeat-x;
     background-position: 0 0;
     background-size: 30px auto;
-    border-top: 6px solid #0b346e;
+    border-top: none;
   }
 
   .entry-header {

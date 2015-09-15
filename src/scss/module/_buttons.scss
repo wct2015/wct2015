@@ -6,43 +6,45 @@ html {
   input[type="button"],
   input[type="reset"],
   input[type="submit"] {
+    // remove default styles
     background: transparent;
-    @include buttonBase(rem-calc(16), lighten($colorOrange, 4%), false);
+    border: none;
+    border-radius: 0;
     text-shadow: none;
-    letter-spacing: 0.8px;
-    transition: 0.3s all;
     &:focus {
-      outline: thin dotted;
+      outline: 0;
     }
     &:link,
     &:visited {
-      color: $colorLink;
+      color: #ffffff;
     }
     &:hover,
     &:active,
     &:focus {
-      outline: 0;
       background: transparent;
-      background-color: darken($colorOrange, 10%);
+      color: #ffffff;
+      outline: 0;
       text-decoration: none;
     }
+    // set button style
+    @include buttonBase($colorOrange, rem-calc(16));
   }
 }
 /* for editor style */
 .entry-content {
   .btn {
-    @include buttonBase(rem-calc(14), lighten($colorOrange, 4%));
+    @include buttonBase($colorOrange, rem-calc(14));
     font-size: rem-calc(16);
   }
   .btnFull {
-    @include buttonBase(rem-calc(14), lighten($colorOrange, 4%), true);
+    @include buttonBase($colorOrange, rem-calc(14), true);
     font-size: rem-calc(16);
   }
   .btnGroup {
     margin: 20px 0;
     margin-left: 0;
     &__btn {
-      @include buttonBase(rem-calc(14), lighten($colorOrange, 4%), true);
+      @include buttonBase($colorOrange, rem-calc(14), true);
       margin-bottom: 0;
       font-size: rem-calc(16);
     }
@@ -53,10 +55,8 @@ html {
   }
 }
 /* register */
-.btnRegister {
-  @include buttonBase(rem-calc(14), lighten($colorOrange, 4%), false);
-  font-size: rem-calc(16);
-  position: static;
+a.btnRegister {
+  @include buttonBase($colorOrange, rem-calc(16), $fullWidth: false);
 }
 /* media */
 @media #{$small-only} {

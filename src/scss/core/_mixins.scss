@@ -173,6 +173,41 @@
   }
 }
 
+@mixin buttonBaseGhost($color, $fontSize, $fullWidth: false, $radius:false) {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid $color;
+  color: $color;
+  font-size: $fontSize;
+  transition: 0.3s;
+  // set $fullWidth
+  @if $fullWidth {
+    width: 100%;
+  }
+  // set border-radius
+  @if $radius {
+    border-radius: 6px;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:link,
+  &:visited {
+    color: $color;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color;
+    color: #ffffff;
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
 //***********************
 // Animates
 //***********************

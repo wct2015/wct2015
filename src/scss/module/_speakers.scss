@@ -3,6 +3,12 @@
 /* speakers
 /* ---------------------------------------- */
 .entry-content {
+  .speaker-avatar {
+    float: left;
+    .avatar {
+      border-radius: 50%;
+    }
+  }
   .wcorg-speaker {
     margin: 40px 0;
     h2 {
@@ -121,6 +127,12 @@
         min-height: 70px;
         padding-left: 90px;
       }
+      .avatar {
+        width: 70px;
+        height: auto;
+      }
+    }
+    .speaker-avatar {
       .avatar {
         width: 70px;
         height: auto;

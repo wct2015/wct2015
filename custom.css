@@ -3,11 +3,7 @@
  * tokyo.wordcamp.org/2015/
  * custom css
  */
-/* fonts
-/* ---------------------------------------- */
-/* genericons */
 @import "https://tokyo.wordcamp.org/2015/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css";
-/* font awesome */
 @import "https://tokyo.wordcamp.org/2015/wp-content/plugins/tagregator/includes/font-awesome/css/font-awesome.min.css";
 /* default styles
 /* ---------------------------------------- */
@@ -8735,8 +8731,32 @@ a.btnRegister:hover, a.btnRegister:active, a.btnRegister:focus {
   display: block;
 }
 
+/* media
+/* ---------------------------------------- */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
 /* speakers
 /* ---------------------------------------- */
+.entry-content .speaker-avatar {
+  float: left;
+}
+.entry-content .speaker-avatar .avatar {
+  border-radius: 50%;
+}
 .entry-content .wcorg-speaker {
   margin: 40px 0;
 }
@@ -8857,25 +8877,11 @@ a.btnRegister:hover, a.btnRegister:active, a.btnRegister:focus {
     width: 70px;
     height: auto;
   }
+  .entry-content .speaker-avatar .avatar {
+    width: 70px;
+    height: auto;
+  }
 }
-/* media
-/* ---------------------------------------- */
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%;
-}
-
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -9315,6 +9321,9 @@ body.error404 #primary:after {
   }
   .menu-item-type-custom > a {
     margin-right: 0;
+  }
+  .menu > li {
+    border-top: none;
   }
 
   .sub-menu li {

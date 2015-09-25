@@ -19,6 +19,16 @@ body {
 #after-header-widgets {
   margin: 40px auto;
 }
+/* 404 */
+body.error404 {
+  #primary {
+    @include grid-row();
+  }
+  .not-found {
+    @extend .hentry;
+  }
+}
+/* media */
 @media #{$medium-up} {
   #main {
     @include grid-row();

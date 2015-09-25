@@ -8373,6 +8373,34 @@ a.btnRegister:hover, a.btnRegister:active, a.btnRegister:focus {
   text-decoration: none;
 }
 
+/* sessions */
+.btnProfile {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #ea851f;
+  color: #ea851f;
+  font-size: 1rem;
+  transition: 0.3s;
+  border-radius: 6px;
+  margin: 0;
+  padding: 0.4rem 0.6rem 0.46rem 0.6rem;
+}
+.btnProfile:focus {
+  outline: 0;
+}
+.btnProfile:link, .btnProfile:visited {
+  color: #ea851f;
+}
+.btnProfile:hover, .btnProfile:active, .btnProfile:focus {
+  background-color: #ea851f;
+  color: #ffffff;
+  outline: 0;
+  text-decoration: none;
+}
+
 /* media */
 @media only screen and (max-width: 40em) {
   .btnRegister {
@@ -8747,6 +8775,56 @@ embed,
 iframe,
 object {
   max-width: 100%;
+}
+
+/* sessions
+/* ---------------------------------------- */
+.entry-content .wcorg-session {
+  margin: 30px 0;
+}
+.entry-content .wcorg-session-subTitle {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.entry-content .wcorg-session-speaker:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-family: 'Genericons';
+  line-height: 1em;
+  font-size: 1rem;
+  margin-right: 4px;
+}
+.entry-content .wcorg-session-speaker-list {
+  margin: 0;
+}
+.entry-content .wcorg-session-speaker-list li {
+  margin-left: 0;
+  list-style: none;
+}
+.entry-content .wcorg-session-speaker-name {
+  margin-right: 10px;
+}
+.entry-content .wcorg-session-stage:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-family: 'Genericons';
+  line-height: 1em;
+  font-size: 1rem;
+  margin-right: 4px;
+}
+.entry-content .wcorg-session-date:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-family: 'Genericons';
+  line-height: 1em;
+  font-size: 1rem;
+  margin-right: 4px;
 }
 
 /* speakers

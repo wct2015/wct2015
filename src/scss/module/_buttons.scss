@@ -79,6 +79,12 @@ a.btnRegister {
     margin-bottom: 0;
   }
 }
+/* sessions */
+.btnProfile {
+  @include buttonBaseGhost($colorOrange, rem-calc(16), $fullWidth: false, $radius: true);
+  margin: 0;
+  padding: 0.4rem 0.6rem 0.46rem 0.6rem;
+}
 /* media */
 @media #{$small-only} {
   .btnRegister {

@@ -87,6 +87,22 @@
   font-family: FontAwesome;
   -webkit-font-smoothing: antialiased;
 }
+// use dashicons
+@mixin dashicon($content: '\f100', $display: inline-block, $lineHeight: 1em, $fontSize: 16px, $valign: top) {
+  display: $display;
+  content: $content;
+  width: $fontSize;
+  height: $fontSize;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 //***********************
 // css graphic

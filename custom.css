@@ -5,6 +5,7 @@
  */
 @import "https://tokyo.wordcamp.org/2015/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css";
 @import "https://tokyo.wordcamp.org/2015/wp-content/plugins/tagregator/includes/font-awesome/css/font-awesome.min.css";
+@import "https://tokyo.wordcamp.org/2015/wp-includes/css/dashicons.min.css";
 /* default styles
 /* ---------------------------------------- */
 /* grouping content */
@@ -112,7 +113,7 @@ table {
 /* columns */
 /* Table */
 /* clearfix */
-.entry-content .wcorg-speaker-description:after, .entry-content .wcorg-speaker-icons:after {
+.widgetFeatured__columns:after, .entry-content .wcorg-speaker-description:after, .entry-content .wcorg-speaker-icons:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -2809,17 +2810,13 @@ table tr td {
 
 /* after header widgets
 /* ---------------------------------------- */
+/* register */
 .widgetRegister {
   margin: 0 auto;
   max-width: 1080px;
   width: 100%;
-  padding: 40px 0;
   text-align: center;
   background-color: #ffffff;
-  background-image: url("files/2015/09/bg_afterHeader.png");
-  background-repeat: repeat-x;
-  background-position: 0 0;
-  background-size: 34px auto;
   border: 1px solid #ededed;
 }
 .widgetRegister:before, .widgetRegister:after {
@@ -2834,21 +2831,141 @@ table tr td {
   display: inline-block;
   padding-bottom: 8px;
   border-bottom: 4px solid #c19534;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   line-height: 1;
 }
 .widgetRegister__text {
   margin: 20px 0;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+}
+
+/* featured */
+.widgetFeatured__title, .widgetFeatured__text {
+  margin-left: 60px;
+}
+@media only screen and (min-width: 40.0625em) {
+  .widgetFeatured__title, .widgetFeatured__text {
+    margin-left: 0;
+  }
+}
+
+.widgetFeatured {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+}
+.widgetFeatured:before, .widgetFeatured:after {
+  content: " ";
+  display: table;
+}
+.widgetFeatured:after {
+  clear: both;
+}
+.widgetFeatured a {
+  display: block;
+  padding: 10px;
+}
+.widgetFeatured .dashicons {
+  display: block;
+  float: left;
+  font-size: 50px;
+  width: 0;
+  height: 0;
+}
+.widgetFeatured__columns {
+  margin-bottom: 2px;
+  background-color: #ffffff;
+}
+.widgetFeatured__title {
+  font-weight: bold;
+}
+.widgetFeatured__text {
+  font-size: 0.8125rem;
+}
+.widgetFeatured__label {
+  margin-right: 5px;
+  padding: 2px 4px;
+  background-color: #ea851f;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 0.8125rem;
 }
 
 /* media */
 @media only screen and (max-width: 40em) {
   .widgetRegister {
-    padding: 40px 10px;
+    padding: 20px 10px;
   }
   .widgetRegister__text {
     text-align: left;
+  }
+}
+@media only screen and (min-width: 40.0625em) {
+  .widgetRegister {
+    padding: 30px;
+    background-image: url("files/2015/09/bg_afterHeader.png");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: 34px auto;
+  }
+  .widgetRegister__title {
+    font-size: 1.5rem;
+  }
+  .widgetRegister__text {
+    font-size: 0.875rem;
+  }
+
+  .widgetFeatured {
+    margin: 0 auto;
+    max-width: 1080px;
+    width: 100%;
+    text-align: center;
+  }
+  .widgetFeatured:before, .widgetFeatured:after {
+    content: " ";
+    display: table;
+  }
+  .widgetFeatured:after {
+    clear: both;
+  }
+  .widgetFeatured a {
+    padding: 20px 10px;
+  }
+  .widgetFeatured .dashicons {
+    float: none;
+    margin: 0 auto 10px auto;
+    width: 80px;
+    height: auto;
+    font-size: 80px;
+  }
+  .widgetFeatured__columns--two {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 16.66667%;
+    float: left;
+  }
+  .widgetFeatured__columns--three {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+  }
+  .widgetFeatured__columns--four {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left;
+  }
+  .widgetFeatured__title {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  .widgetFeatured__columns--three {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 25%;
+    float: left;
   }
 }
 /* buttons
@@ -3123,7 +3240,7 @@ a.btnRegister:hover, a.btnRegister:active, a.btnRegister:focus {
 
 /* media */
 @media only screen and (max-width: 40em) {
-  .btnRegister {
+  a.btnRegister {
     font-size: 0.875rem;
   }
 }
@@ -3748,56 +3865,6 @@ The `sprites` mixin generates identical output to the CSS template
 
 /* featured
 /* ---------------------------------------- */
-.featured {
-  margin: 0 auto;
-  max-width: 1080px;
-  width: 100%;
-}
-.featured:before, .featured:after {
-  content: " ";
-  display: table;
-}
-.featured:after {
-  clear: both;
-}
-.featured__title {
-  margin: 0 auto;
-  padding: 30px 0;
-  text-align: center;
-  font-size: 1.125rem;
-}
-.featured__content a {
-  display: block;
-  min-height: 100px;
-  height: auto;
-  background-color: #ffffff;
-}
-@media only screen and (max-width: 40em) {
-  .featured__content {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 100%;
-    float: left;
-  }
-}
-@media only screen and (min-width: 40.0625em) {
-  .featured__content {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 50%;
-    float: left;
-  }
-}
-@media only screen and (min-width: 64.0625em) {
-  .featured__content {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 25%;
-    float: left;
-    margin-bottom: 0;
-  }
-}
-
 /* footer
 /* ---------------------------------------- */
 .site-footer {
@@ -4128,7 +4195,7 @@ body {
 
 /* after-header-widgets */
 #after-header-widgets {
-  margin: 40px auto;
+  margin-bottom: 0;
 }
 
 /* 404 */

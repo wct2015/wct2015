@@ -87,7 +87,7 @@ a.btnRegister {
 }
 /* media */
 @media #{$small-only} {
-  .btnRegister {
+  a.btnRegister {
     font-size: rem-calc(14);
   }
 }

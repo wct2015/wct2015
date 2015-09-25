@@ -55,8 +55,12 @@ html {
   }
 }
 /* register */
-a.btnRegister {
-  @include buttonBase($colorOrange, rem-calc(16), $fullWidth: false);
+.btnRegister {
+  @include buttonBase($colorOrange, rem-calc(16), $fullWidth: true);
+  &:before {
+    @include dashicons('\f486', $fontSize: 20px, $valign: middle);
+    margin-right: 8px;
+  }
 }
 /* sns */
 .btnFollow {

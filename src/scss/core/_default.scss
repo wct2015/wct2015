@@ -2,19 +2,6 @@
 /* default styles
 /* ---------------------------------------- */
 
-/* the root element */
-html {
-  font-size: rem-calc(14);
-}
-body {
-  background-color: #fff;
-  background-repeat: no-repeat;
-  color: $colorText;
-  word-wrap: break-word;
-  font-family: $fontFamily;
-  font-weight: 300;
-}
-
 /* grouping content */
 iframe {
   vertical-align: middle;

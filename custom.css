@@ -3790,6 +3790,9 @@ object {
 .entry-content .wcorg-speaker-url {
   line-height: 1;
 }
+.entry-content .wcorg-speaker-url a {
+  word-break: break-word;
+}
 .entry-content .wcorg-speaker-info-session {
   margin-top: 0;
   margin-bottom: 10px;

@@ -110,7 +110,7 @@ table {
   border-collapse: collapse;
 }
 
-/* columns */
+/* layout */
 /* Table */
 /* clearfix */
 .widgetFeatured__columns:after, .entry-content .wcorg-speaker-description:after, .entry-content .wcorg-speaker-icons:after {
@@ -4934,4 +4934,25 @@ footer.entry-meta a:hover {
 .sponsors__list--support li a {
   max-width: 200px;
   margin: 10px auto;
+}
+
+/* timetable
+/* ---------------------------------------- */
+/* page layout */
+.page-id-2235 #secondary,
+.page-id-2428 #secondary,
+.page-id-1488 #secondary {
+  display: none;
+}
+@media only screen and (min-width: 64.0625em) {
+  .page-id-2235 #main,
+  .page-id-2235 #primary,
+  .page-id-2428 #main,
+  .page-id-2428 #primary,
+  .page-id-1488 #main,
+  .page-id-1488 #primary {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
 }

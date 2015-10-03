@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* timetable
+/* ---------------------------------------- */
+
+/* page layout */
+.page-id-2235,
+.page-id-2428,
+.page-id-1488 {
+  #secondary {
+    display: none;
+  }
+  #main,
+  #primary {
+    @media #{$large-up} {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  }
+}

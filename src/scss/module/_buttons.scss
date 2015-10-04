@@ -39,6 +39,12 @@ html {
   .btnFull {
     @include buttonBase($colorOrange, rem-calc(14), true);
     font-size: rem-calc(16);
+    &--disabled {
+      @include buttonBase($colorSilver, rem-calc(14), true);
+      &:hover {
+        cursor: default;
+      }
+    }
   }
   .btnGroup {
     margin: 20px 0;

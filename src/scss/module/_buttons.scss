@@ -39,6 +39,12 @@ html {
   .btnFull {
     @include buttonBase($colorOrange, rem-calc(14), true);
     font-size: rem-calc(16);
+    &--disabled {
+      @include buttonBase($colorSilver, rem-calc(14), true);
+      &:hover {
+        background-color: $colorSilver;
+      }
+    }
   }
   .btnGroup {
     margin: 20px 0;
@@ -47,6 +53,12 @@ html {
       @include buttonBase($colorOrange, rem-calc(14), true);
       margin-bottom: 0;
       font-size: rem-calc(16);
+      &--disabled {
+        @include buttonBase($colorSilver, rem-calc(14), true);
+        &:hover {
+          background-color: $colorSilver;
+        }
+      }
     }
     > li {
       margin-left: 0;

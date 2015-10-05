@@ -3156,7 +3156,7 @@ html input[type="submit"]:focus {
   text-decoration: none;
 }
 .entry-content .btnFull--disabled:hover {
-  cursor: default;
+  background-color: #d3d3d3;
 }
 .entry-content .btnGroup {
   margin: 20px 0;
@@ -3187,6 +3187,33 @@ html input[type="submit"]:focus {
   color: #ffffff;
   outline: 0;
   text-decoration: none;
+}
+.entry-content .btnGroup__btn--disabled {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 3px 0 #c4c4c4;
+  background-color: #d3d3d3;
+  color: #ffffff;
+  font-size: 0.875rem;
+  transition: background-color 300ms ease-out;
+  width: 100%;
+}
+.entry-content .btnGroup__btn--disabled:focus {
+  outline: 0;
+}
+.entry-content .btnGroup__btn--disabled:link, .entry-content .btnGroup__btn--disabled:visited {
+  color: #ffffff;
+}
+.entry-content .btnGroup__btn--disabled:hover, .entry-content .btnGroup__btn--disabled:active, .entry-content .btnGroup__btn--disabled:focus {
+  background-color: #bfbfbf;
+  color: #ffffff;
+  outline: 0;
+  text-decoration: none;
+}
+.entry-content .btnGroup__btn--disabled:hover {
+  background-color: #d3d3d3;
 }
 .entry-content .btnGroup > li {
   margin-left: 0;
@@ -3225,7 +3252,7 @@ html input[type="submit"]:focus {
   height: 20px;
   font-size: 20px;
   vertical-align: middle;
-  line-height: 1em;
+  line-height: 1;
   font-family: dashicons;
   text-decoration: inherit;
   font-weight: 400;
@@ -4982,14 +5009,158 @@ footer.entry-meta a:hover {
   margin: 0 auto;
 }
 
-.entry-content .target__item {
-  padding-right: 10px;
-  float: left;
+/* legend */
+.entry-content .legend__item {
   margin-left: 0;
   list-style-type: none;
 }
-.entry-content .target__item .dashicons {
+.entry-content .legend__item--inline {
+  padding-right: 10px;
+  float: left;
+}
+
+/* target icons */
+.iconTarget {
+  padding: 1px 2px;
   color: #104a9c;
+  border: 1px solid #ffffff;
+  border-radius: 14px;
+}
+.iconTarget--beginner:before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconTarget--blogger:before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconTarget--business:before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconTarget--developper:before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconTarget--creator:before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* tags for hands-on */
+.tagTrack {
+  display: inline-block;
+  padding: 4px;
+  font-size: 0.625rem;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #104a9c;
+  line-height: 1;
+}
+
+.tagHandson {
+  display: inline-block;
+  padding: 3px;
+  font-size: 0.625rem;
+  border-radius: 3px;
+  background-color: #104a9c;
+  color: #ffffff;
+  line-height: 1;
+  font-size: 0.75rem;
+}
+.tagHandson--prepare:before {
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  vertical-align: top;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 2px;
+}
+.tagHandson--register:before {
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  vertical-align: top;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 2px;
 }
 
 /* timetable */
@@ -5049,8 +5220,7 @@ footer.entry-meta a:hover {
 }
 .timetable td .session dt,
 .timetable td .session dd {
-  margin-left: 0;
-  margin-bottom: 0;
+  margin: 0 0 3px 0;
 }
 .timetable td .session__title {
   background: transparent;
@@ -5069,15 +5239,6 @@ footer.entry-meta a:hover {
   line-height: 1em;
   color: #575757;
   font-size: 0.875rem;
-}
-.timetable td .session__tag {
-  display: inline-block;
-  padding: 4px;
-  font-size: 0.625rem;
-  border-radius: 3px;
-  background-color: #ffffff;
-  color: #104a9c;
-  line-height: 1;
 }
 .timetable td.cell {
   padding-top: 0.5rem;

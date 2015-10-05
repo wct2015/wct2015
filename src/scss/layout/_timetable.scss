@@ -1,5 +1,25 @@
 @charset "utf-8";
 
+// specific variables and mixin
+$colorHead        : #a07826;
+$colorHeadLighten : lighten($colorHead, 40%);
+$colorHall        : lighten(#1e4b96, 50%); // blue
+$color01          : lighten(#087641, 64%); // green
+$color02          : lighten(#dd5411, 44%); // orange
+$color03          : lighten(#c91138, 44%); // red
+$color05          : lighten(#a9488d, 44%); // purple
+$color06          : lighten(#689dbc, 36%); // lighten blue
+$colorNone        : lighten($colorSilver, 10%);
+
+@mixin tag($padding, $bgColor, $color) {
+  display: inline-block;
+  padding: $padding;
+  font-size: rem-calc(10);
+  border-radius: 3px;
+  background-color: $bgColor;
+  color: $color;
+  line-height: 1;
+}
 /* timetable
 /* ---------------------------------------- */
 
@@ -17,30 +37,73 @@
     margin: 0 auto;
   }
 }
+/* legend */
 .entry-content {
-  .target {
+  .legend {
     &__item {
-      padding-right: 10px;
-      float: left;
       margin-left: 0;
       list-style-type: none;
-      .dashicons {
-        color: $colorLink;
+      &--inline {
+        padding-right: 10px;
+        float: left;
       }
     }
   }
 }
-/* timetable */
-$colorHead        : #a07826;
-$colorHeadLighten : lighten($colorHead, 40%);
-$colorHall        : lighten(#1e4b96, 50%); // blue
-$color01          : lighten(#087641, 64%); // green
-$color02          : lighten(#dd5411, 44%); // orange
-$color03          : lighten(#c91138, 44%); // red
-$color05          : lighten(#a9488d, 44%); // purple
-$color06          : lighten(#689dbc, 36%); // lighten blue
-$colorNone        : lighten($colorSilver, 10%);
+/* target icons */
+.iconTarget {
+  padding: 1px 2px;
+  color: $colorLink;
+  border: 1px solid #ffffff;
+  border-radius: 14px;
+  &--beginner {
+    &:before {
+      @include dashicons('\f487', $fontSize: 14px, $valign: middle);
+    }
+  }
+  &--blogger {
+    &:before {
+      @include dashicons('\f540', $fontSize: 14px, $valign: middle);
+    }
+  }
+  &--business {
+    &:before {
+      @include dashicons('\f512', $fontSize: 14px, $valign: middle);
+    }
+  }
+  &--developper {
+    &:before {
+      @include dashicons('\f107', $fontSize: 14px, $valign: middle);
+    }
+  }
+  &--creator {
+    &:before {
+      @include dashicons('\f475', $fontSize: 14px, $valign: middle);
+    }
+  }
 
+}
+/* tags for hands-on */
+.tagTrack {
+  @include tag(4px, #ffffff, $colorLink);
+}
+.tagHandson {
+  @include tag(3px, $colorLink, #ffffff);
+  font-size: rem-calc(12);
+  &--prepare {
+    &:before {
+      @include dashicons('\f111', $fontSize: 12px, $valign: top);
+      margin-right: 2px;
+    }
+  }
+  &--register {
+    &:before {
+      @include dashicons('\f524', $fontSize: 12px, $valign: top);
+      margin-right: 2px;
+    }
+  }
+}
+/* timetable */
 .timetable {
   width: 100%;
   margin: 0 auto;
@@ -98,16 +161,14 @@ $colorNone        : lighten($colorSilver, 10%);
       margin: 0;
       dt,
       dd {
-        margin-left: 0;
-        margin-bottom: 0;
+        margin: 0 0 3px 0;
       }
       &__title {
         background: transparent;
         font-weight: bold;
         padding: 0;
       }
-      &__target {
-      }
+      &__target {}
       &__speaker {
         a {
           font-size:rem-calc(12);
@@ -118,15 +179,7 @@ $colorNone        : lighten($colorSilver, 10%);
           font-size: rem-calc(14);
         }
       }
-      &__tag {
-        display: inline-block;
-        padding: 4px;
-        font-size: rem-calc(10);
-        border-radius: 3px;
-        background-color: #ffffff;
-        color: $colorLink;
-        line-height: 1;
-      }
+      &__track {}
     }
     &.cell {
       padding-top: 0.5rem;

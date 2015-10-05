@@ -42,7 +42,7 @@ html {
     &--disabled {
       @include buttonBase($colorSilver, rem-calc(14), true);
       &:hover {
-        cursor: default;
+        background-color: $colorSilver;
       }
     }
   }
@@ -53,6 +53,12 @@ html {
       @include buttonBase($colorOrange, rem-calc(14), true);
       margin-bottom: 0;
       font-size: rem-calc(16);
+      &--disabled {
+        @include buttonBase($colorSilver, rem-calc(14), true);
+        &:hover {
+          background-color: $colorSilver;
+        }
+      }
     }
     > li {
       margin-left: 0;

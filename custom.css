@@ -3966,6 +3966,9 @@ The `sprites` mixin generates identical output to the CSS template
   margin-left: 0;
   list-style-type: none;
 }
+.entry-content #tix-attendees .tix-columns-3 li a {
+  word-wrap: break-word;
+}
 @media only screen and (min-width: 40.0625em) {
   .entry-content #tix-attendees .tix-columns-3 li {
     padding-left: 0.9375rem;
@@ -4629,7 +4632,13 @@ footer.entry-meta a:hover {
 .adventCalendar th.day {
   background-color: #c19534;
   color: #ffffff;
-  border-bottom: 2px solid #71571e;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  border-bottom: 4px solid #71571e;
+}
+.adventCalendar th.day:last-child, .adventCalendar th.day:first-child {
+  border-left: none;
+  border-right: none;
 }
 .adventCalendar td {
   background-color: #fffae6;
@@ -4640,6 +4649,9 @@ footer.entry-meta a:hover {
 }
 .adventCalendar td.wct2015 {
   background-color: #0b346e;
+}
+.adventCalendar .box {
+  min-height: 200px;
 }
 .adventCalendar .box * {
   word-wrap: break-word;
@@ -4658,17 +4670,16 @@ footer.entry-meta a:hover {
   border-radius: 50%;
   border: 1px solid #c19534;
 }
+.adventCalendar .box__thumb img.wapuu {
+  border-radius: 0;
+  border: none;
+}
 .adventCalendar .box__name {
   margin: 8px 0;
   font-weight: bold;
   font-size: 0.75rem;
 }
 .adventCalendar .box__name--wct2015 {
-  padding-top: 80px;
-  background-image: url("files/2015/08/wapuu_mono.png");
-  background-repeat: no-repeat;
-  background-size: 60px auto;
-  background-position: center 0;
   color: #ffffff;
 }
 .adventCalendar .box__twitter {

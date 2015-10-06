@@ -27,7 +27,14 @@
     &.day {
       background-color: $colorGold;
       color: #ffffff;
-      border-bottom: 2px solid darken($colorGold, 20%);
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #ffffff;
+      border-bottom: 4px solid darken($colorGold, 20%);
+      &:last-child,
+      &:first-child {
+        border-left: none;
+        border-right: none;
+      }
     }
   }
   td {
@@ -41,6 +48,7 @@
     }
   }
   .box {
+    min-height: 200px;
     * {
       word-wrap: break-word;
     }
@@ -57,17 +65,16 @@
         border-radius: 50%;
         border: 1px solid $colorGold;
       }
+      img.wapuu {
+        border-radius: 0;
+        border: none;
+      }
     }
     &__name {
       margin: 8px 0;
       font-weight: bold;
       font-size: rem-calc(12);
       &--wct2015 {
-        padding-top: 80px;
-        background-image: url("files/2015/08/wapuu_mono.png");
-        background-repeat: no-repeat;
-        background-size: 60px auto;
-        background-position: center 0;
         color: #ffffff;
       }
     }

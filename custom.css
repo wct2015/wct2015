@@ -3550,9 +3550,6 @@ html input[type="submit"]:focus {
 .entry-content ol li > ul li {
   list-style-type: square;
 }
-.entry-content a {
-  font-size: 0.875rem;
-}
 .entry-content code {
   color: #c3322c;
   font-family: Menlo, Consolas, Courier, sans-serif;
@@ -5358,7 +5355,7 @@ footer.entry-meta a:hover {
   font-weight: bold;
   padding: 0;
 }
-.timetable td .session__speaker a {
+.timetable td .session__speaker {
   font-size: 0.75rem;
 }
 .timetable td .session__speaker:before {

@@ -170,9 +170,7 @@ $colorNone        : lighten($colorSilver, 10%);
       }
       &__target {}
       &__speaker {
-        a {
-          font-size:rem-calc(12);
-        }
+        font-size: rem-calc(12);
         &:before {
           @include genericon('\f304');
           color: lighten($colorText, 14%);

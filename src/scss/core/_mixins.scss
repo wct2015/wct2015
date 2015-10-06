@@ -1,6 +1,22 @@
 @charset "utf-8";
 
 //***********************
+// full width layout
+// $name
+//***********************
+@mixin fullWidth($width) {
+  #secondary {
+    display: none;
+  }
+  #main,
+  #primary {
+    width: 100%;
+    max-width: $width;
+    margin: 0 auto;
+  }
+}
+
+//***********************
 // hasPseudoClass
 // $name
 //***********************

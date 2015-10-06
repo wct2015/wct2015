@@ -3966,6 +3966,9 @@ The `sprites` mixin generates identical output to the CSS template
   margin-left: 0;
   list-style-type: none;
 }
+.entry-content #tix-attendees .tix-columns-3 li a {
+  word-wrap: break-word;
+}
 @media only screen and (min-width: 40.0625em) {
   .entry-content #tix-attendees .tix-columns-3 li {
     padding-left: 0.9375rem;
@@ -4591,6 +4594,134 @@ footer.entry-meta a:hover {
   display: none;
 }
 
+/* relay blog
+/* ---------------------------------------- */
+/* page layout */
+.page-id-2344 #secondary,
+.page-id-2444 #secondary,
+.page-id-1643 #secondary {
+  display: none;
+}
+.page-id-2344 #main,
+.page-id-2344 #primary,
+.page-id-2444 #main,
+.page-id-2444 #primary,
+.page-id-1643 #main,
+.page-id-1643 #primary {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* advent calendar */
+.adventCalendar {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  border: none;
+  table-layout: fixed;
+}
+.adventCalendar th,
+.adventCalendar td {
+  text-align: center;
+}
+.adventCalendar th.month {
+  background-color: #0b346e;
+  color: #ffffff;
+}
+.adventCalendar th.day {
+  background-color: #c19534;
+  color: #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  border-bottom: 4px solid #71571e;
+}
+.adventCalendar th.day:last-child, .adventCalendar th.day:first-child {
+  border-left: none;
+  border-right: none;
+}
+.adventCalendar td {
+  background-color: #fffae6;
+  border: 2px solid #ffffff;
+}
+.adventCalendar td.none {
+  background-color: #ebf3fd;
+}
+.adventCalendar td.wct2015 {
+  background-color: #0b346e;
+}
+.adventCalendar .box {
+  min-height: 200px;
+}
+.adventCalendar .box * {
+  word-wrap: break-word;
+}
+.adventCalendar .box__date {
+  color: #ea851f;
+  font-style: normal;
+  font-weight: bold;
+}
+.adventCalendar .box__thumb {
+  width: 100%;
+  max-width: 60px;
+  margin: 0 auto;
+}
+.adventCalendar .box__thumb > img {
+  border-radius: 50%;
+  border: 1px solid #c19534;
+}
+.adventCalendar .box__thumb img.wapuu {
+  border-radius: 0;
+  border: none;
+}
+.adventCalendar .box__name {
+  margin: 8px 0;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+.adventCalendar .box__name--wct2015 {
+  color: #ffffff;
+}
+.adventCalendar .box__twitter {
+  margin: 8px 0;
+  line-height: 1;
+}
+.adventCalendar .box__twitter a {
+  font-size: 0.75rem;
+}
+.adventCalendar .box__twitter:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-family: 'Genericons';
+  line-height: 1em;
+  margin-right: 3px;
+  font-size: 0.8125rem;
+  color: #55acee;
+}
+.adventCalendar .box__title {
+  margin: 12px 0;
+  text-align: left;
+  font-size: 0.8125rem;
+  font-weight: bold;
+}
+.adventCalendar .box__title--wct2015 {
+  text-align: center;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 40em) {
+  .adventCalendar th {
+    display: block;
+  }
+  .adventCalendar th.day {
+    display: none;
+  }
+  .adventCalendar td {
+    display: block;
+  }
+}
 /* sidebar
 /* ---------------------------------------- */
 #primary-sidebar {

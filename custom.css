@@ -5149,8 +5149,8 @@ footer.entry-meta a:hover {
 
 /* target icons */
 .iconTarget {
-  padding: 1px 2px;
   color: #104a9c;
+  padding: 1px 2px;
   border: 1px solid #ffffff;
   border-radius: 14px;
 }
@@ -5328,16 +5328,6 @@ footer.entry-meta a:hover {
 .timetable td {
   word-wrap: break-word;
 }
-.timetable td .dashicons {
-  color: #104a9c;
-  font-size: 0.75rem;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  line-height: 1;
-  vertical-align: middle;
-  margin-bottom: 4px;
-  padding: 2px 0;
-}
 .timetable td.open, .timetable td.break {
   background-color: #ffffff;
   color: #a07826;
@@ -5354,6 +5344,7 @@ footer.entry-meta a:hover {
   background: transparent;
   font-weight: bold;
   padding: 0;
+  font-size: 0.8125rem;
 }
 .timetable td .session__speaker {
   font-size: 0.75rem;
@@ -5414,6 +5405,9 @@ footer.entry-meta a:hover {
   }
   .timetable th.floor, .timetable th.room {
     display: none;
+  }
+  .timetable td .session__title {
+    font-size: 0.875rem;
   }
   .timetable td.cell:before {
     display: block;

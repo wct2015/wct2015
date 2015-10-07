@@ -87,48 +87,27 @@ $colorNone        : lighten($colorSilver, 10%);
 .tagTrack {
   @include tag(4px, #ffffff, $colorLink);
 }
+.tagPrepare {
+  margin: 10px auto;
+  color: $colorLink;
+  font-size: rem-calc(12);
+  font-weight: bold;
+  &:before {
+    @include dashicons('\f111', rem-calc(10));
+  }
+}
 .boxHandson {
   margin-top: 40px;
   &__text {
-    color: $colorLink;
     font-size: rem-calc(11);
-  }
-  .tagPrepare {
-    margin: 10px auto;
-    color: $colorLink;
-    font-size: rem-calc(12);
-    font-weight: bold;
-    &:before {
-      @include dashicons('\f111', rem-calc(10));
-    }
   }
 }
 .btnHandson {
-  display: inline-block;
-  margin: 0.4rem 0;
+  @include buttonBase($colorLink, rem-calc(11), $fullWidth: true);
+  margin: 6px 0;
   padding: 0.4rem;
-  text-align: center;
-  background-color: $colorLink;
-  color: #ffffff;
-  font-size: rem-calc(11);
-  transition: background-color 300ms ease-out;
-  width: 100%;
+  box-shadow: none;
   border-radius: 3px;
-  &:focus {
-    outline: 0;
-  }
-  &:link,
-  &:visited {
-    color: #ffffff;
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: #ffffff;
-    color: #ffffff;
-    outline: 0;
-    text-decoration: none;
-  }
 }
 /* timetable */
 .timetable {

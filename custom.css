@@ -5246,20 +5246,13 @@ footer.entry-meta a:hover {
   line-height: 1;
 }
 
-.boxHandson {
-  margin-top: 40px;
-}
-.boxHandson__text {
-  color: #104a9c;
-  font-size: 0.6875rem;
-}
-.boxHandson .tagPrepare {
+.tagPrepare {
   margin: 10px auto;
   color: #104a9c;
   font-size: 0.75rem;
   font-weight: bold;
 }
-.boxHandson .tagPrepare:before {
+.tagPrepare:before {
   display: 0.625rem;
   content: "";
   width: 16px;
@@ -5276,16 +5269,27 @@ footer.entry-meta a:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.boxHandson {
+  margin-top: 40px;
+}
+.boxHandson__text {
+  font-size: 0.6875rem;
+}
+
 .btnHandson {
   display: inline-block;
-  margin: 0.4rem 0;
-  padding: 0.4rem;
+  margin: 1rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
+  box-shadow: 0 3px 0 #0d3d81;
   background-color: #104a9c;
   color: #ffffff;
   font-size: 0.6875rem;
   transition: background-color 300ms ease-out;
   width: 100%;
+  margin: 6px 0;
+  padding: 0.4rem;
+  box-shadow: none;
   border-radius: 3px;
 }
 .btnHandson:focus {
@@ -5295,7 +5299,7 @@ footer.entry-meta a:hover {
   color: #ffffff;
 }
 .btnHandson:hover, .btnHandson:active, .btnHandson:focus {
-  background-color: #ffffff;
+  background-color: #0c3877;
   color: #ffffff;
   outline: 0;
   text-decoration: none;

@@ -3521,6 +3521,7 @@ html input[type="submit"]:focus {
   margin-bottom: 10px;
 }
 .entry-content dl dd {
+  margin-right: 0;
   margin-left: 8px;
   line-height: 1.6;
 }
@@ -5137,6 +5138,27 @@ footer.entry-meta a:hover {
   margin: 0 auto;
 }
 
+.gridRow {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+}
+.gridRow:before, .gridRow:after {
+  content: " ";
+  display: table;
+}
+.gridRow:after {
+  clear: both;
+}
+@media only screen and (min-width: 40.0625em) {
+  .gridRow__col2 {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+  }
+}
+
 /* legend */
 .entry-content .legend__item {
   margin-left: 0;
@@ -5235,6 +5257,17 @@ footer.entry-meta a:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* mentor */
+.mentor:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-family: 'Genericons';
+  line-height: 1em;
+  font-size: 1rem;
+}
+
 /* tags for hands-on */
 .tagTrack {
   display: inline-block;
@@ -5312,11 +5345,17 @@ footer.entry-meta a:hover {
   border: 1px solid #ededed;
   table-layout: fixed;
 }
+.timetable--flex {
+  table-layout: auto;
+}
 .timetable th.time {
   background-color: #a07826;
   border-bottom: 2px solid #ead4a8;
   text-align: center;
   color: #ffffff;
+}
+.timetable th.time--day2 {
+  width: 20%;
 }
 .timetable th.floor {
   padding: 0.3rem;
@@ -5410,6 +5449,12 @@ footer.entry-meta a:hover {
 .timetable td.cell--06 {
   background-color: #d9e6ee;
 }
+.timetable td.cell--content {
+  width: 80%;
+  text-align: center;
+  color: #a07826;
+  border: none;
+}
 
 /* media queries */
 @media only screen and (max-width: 40em) {
@@ -5419,6 +5464,16 @@ footer.entry-meta a:hover {
   }
   .timetable th.floor, .timetable th.room {
     display: none;
+  }
+  .timetable th.room--day2 {
+    display: block;
+  }
+  .timetable th.time--day2 {
+    display: block;
+    width: 100%;
+    background-color: #f4e9d1;
+    border-bottom: none;
+    color: #a07826;
   }
   .timetable td .session__title {
     font-size: 0.875rem;
@@ -5456,5 +5511,10 @@ footer.entry-meta a:hover {
   .timetable td.cell--06:before {
     content: "3F Room6";
     color: #31586e;
+  }
+  .timetable td.cell--content {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
   }
 }

@@ -3,12 +3,12 @@
 // specific variables and mixin
 $colorHead        : #a07826;
 $colorHeadLighten : lighten($colorHead, 40%);
-$colorHall        : lighten(#1e4b96, 50%); // blue
-$color01          : lighten(#087641, 64%); // green
-$color02          : lighten(#dd5411, 44%); // orange
-$color03          : lighten(#c91138, 44%); // red
+$colorHall        : lighten(#1e4b96, 52%); // blue
+$color01          : lighten(#087641, 68%); // green
+$color02          : lighten(#dd5411, 48%); // orange
+$color03          : lighten(#c91138, 48%); // red
 $color05          : lighten(#a9488d, 44%); // purple
-$color06          : lighten(#689dbc, 36%); // lighten blue
+$color06          : lighten(#689dbc, 32%); // lighten blue
 $colorNone        : lighten($colorSilver, 10%);
 
 @mixin tag($padding, $bgColor, $color) {
@@ -87,21 +87,27 @@ $colorNone        : lighten($colorSilver, 10%);
 .tagTrack {
   @include tag(4px, #ffffff, $colorLink);
 }
-.tagHandson {
-  @include tag(3px, $colorLink, #ffffff);
+.tagPrepare {
+  margin: 10px auto;
+  color: $colorLink;
   font-size: rem-calc(12);
-  &--prepare {
-    &:before {
-      @include dashicons('\f111', $fontSize: 12px, $valign: top);
-      margin-right: 2px;
-    }
+  font-weight: bold;
+  &:before {
+    @include dashicons('\f111', rem-calc(10));
   }
-  &--register {
-    &:before {
-      @include dashicons('\f524', $fontSize: 12px, $valign: top);
-      margin-right: 2px;
-    }
+}
+.boxHandson {
+  margin-top: 40px;
+  &__text {
+    font-size: rem-calc(11);
   }
+}
+.btnHandson {
+  @include buttonBase($colorLink, rem-calc(11), $fullWidth: true);
+  margin: 6px 0;
+  padding: 0.4rem;
+  box-shadow: none;
+  border-radius: 3px;
 }
 /* timetable */
 .timetable {
@@ -229,10 +235,9 @@ $colorNone        : lighten($colorSilver, 10%);
         &:before {
           display: block;
           margin-bottom: 4px;
-          padding: 2px 4px;
           color: #ffffff;
+          font-weight: bold;
           font-size: rem-calc(12);
-          text-align: center;
         }
         &--none {
           display: none;
@@ -240,37 +245,37 @@ $colorNone        : lighten($colorSilver, 10%);
         &--hall {
           &:before {
             content: "2F 大ホール";
-            background-color: darken($colorHall, 30%);
+            color: darken($colorHall, 55%);
           }
         }
         &--01 {
           &:before {
             content: "3F Room1";
-            background-color: darken($color01, 45%);
+            color: darken($color01, 70%);
           }
         }
         &--02 {
           &:before {
             content: "3F Room2";
-            background-color: darken($color02, 30%);
+            color: darken($color02, 55%);
           }
         }
         &--03 {
           &:before {
             content: "3F Room3";
-            background-color: darken($color03, 30%);
+            color: darken($color03, 55%);
           }
         }
         &--05 {
           &:before {
             content: "3F Room5";
-            background-color: darken($color05, 30%);
+            color: darken($color05, 55%);
           }
         }
         &--06 {
           &:before {
             content: "3F Room6";
-            background-color: darken($color06, 30%);
+            color: darken($color06, 58%);
           }
         }
       }

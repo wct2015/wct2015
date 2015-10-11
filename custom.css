@@ -5246,49 +5246,63 @@ footer.entry-meta a:hover {
   line-height: 1;
 }
 
-.tagHandson {
+.tagPrepare {
+  margin: 10px auto;
+  color: #104a9c;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.tagPrepare:before {
+  display: 0.625rem;
+  content: "";
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  vertical-align: top;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.boxHandson {
+  margin-top: 40px;
+}
+.boxHandson__text {
+  font-size: 0.6875rem;
+}
+
+.btnHandson {
   display: inline-block;
-  padding: 3px;
-  font-size: 0.625rem;
-  border-radius: 3px;
+  margin: 1rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 3px 0 #0d3d81;
   background-color: #104a9c;
   color: #ffffff;
-  line-height: 1;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
+  transition: background-color 300ms ease-out;
+  width: 100%;
+  margin: 6px 0;
+  padding: 0.4rem;
+  box-shadow: none;
+  border-radius: 3px;
 }
-.tagHandson--prepare:before {
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
-  font-size: 12px;
-  vertical-align: top;
-  line-height: 1;
-  font-family: dashicons;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin-right: 2px;
+.btnHandson:focus {
+  outline: 0;
 }
-.tagHandson--register:before {
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
-  font-size: 12px;
-  vertical-align: top;
-  line-height: 1;
-  font-family: dashicons;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin-right: 2px;
+.btnHandson:link, .btnHandson:visited {
+  color: #ffffff;
+}
+.btnHandson:hover, .btnHandson:active, .btnHandson:focus {
+  background-color: #0c3877;
+  color: #ffffff;
+  outline: 0;
+  text-decoration: none;
 }
 
 /* timetable */
@@ -5376,25 +5390,25 @@ footer.entry-meta a:hover {
   background-color: #ededed;
 }
 .timetable td.cell--hall {
-  background-color: #c1d3f3;
+  background-color: #c9d9f4;
 }
 .timetable td.cell--01 {
-  background-color: #c9fbe3;
+  background-color: #dcfded;
 }
 .timetable td.cell--02 {
-  background-color: #fce0d3;
+  background-color: #fdede6;
 }
 .timetable td.cell--02 {
-  background-color: #fce0d3;
+  background-color: #fdede6;
 }
 .timetable td.cell--03 {
-  background-color: #fac1cd;
+  background-color: #fbd3dc;
 }
 .timetable td.cell--05 {
   background-color: #f2e0ec;
 }
 .timetable td.cell--06 {
-  background-color: #e7f0f4;
+  background-color: #d9e6ee;
 }
 
 /* media queries */
@@ -5412,36 +5426,35 @@ footer.entry-meta a:hover {
   .timetable td.cell:before {
     display: block;
     margin-bottom: 4px;
-    padding: 2px 4px;
     color: #ffffff;
+    font-weight: bold;
     font-size: 0.75rem;
-    text-align: center;
   }
   .timetable td.cell--none {
     display: none;
   }
   .timetable td.cell--hall:before {
     content: "2F 大ホール";
-    background-color: #417ad9;
+    color: #1b4589;
   }
   .timetable td.cell--01:before {
     content: "3F Room1";
-    background-color: #0ed173;
+    color: #076c3c;
   }
   .timetable td.cell--02:before {
     content: "3F Room2";
-    background-color: #f17d45;
+    color: #bc470e;
   }
   .timetable td.cell--03:before {
     content: "3F Room3";
-    background-color: #ee345b;
+    color: #a80e2f;
   }
   .timetable td.cell--05:before {
     content: "3F Room5";
-    background-color: #c474ad;
+    color: #82376c;
   }
   .timetable td.cell--06:before {
     content: "3F Room6";
-    background-color: #7dabc5;
+    color: #31586e;
   }
 }

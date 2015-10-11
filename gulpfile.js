@@ -62,7 +62,7 @@ gulp.task('browser-sync', function() {
     args.open = 'external';
   };
   browserSync.init(args);
-})
+});
 
 gulp.task('bs-reload', function() {
   browserSync.reload()

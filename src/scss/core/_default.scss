@@ -13,6 +13,7 @@ a {
   color: $colorLink;
   text-decoration: none;
   transition: 0.3s all;
+  word-wrap: break-word;
   &:focus {
     outline: thin dotted;
   }

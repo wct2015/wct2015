@@ -19,6 +19,7 @@ a {
   color: #104a9c;
   text-decoration: none;
   transition: 0.3s all;
+  word-wrap: break-word;
 }
 a:focus {
   outline: thin dotted;

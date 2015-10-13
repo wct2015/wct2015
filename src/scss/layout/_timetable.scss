@@ -37,6 +37,17 @@ $colorNone        : lighten($colorSilver, 10%);
     margin: 0 auto;
   }
 }
+.gridRow {
+  @include grid-row();
+  &__col2 {
+    @media #{$medium-up} {
+      @include grid-column(
+        $columns: 6,
+        $collapse: false
+      );
+    }
+  }
+}
 /* legend */
 .entry-content {
   .legend {
@@ -83,6 +94,13 @@ $colorNone        : lighten($colorSilver, 10%);
   }
 
 }
+/* mentor */
+.mentor {
+  &:before {
+    @include genericon('\f304');
+    font-size: rem-calc(16);
+  }
+}
 /* tags for hands-on */
 .tagTrack {
   @include tag(4px, #ffffff, $colorLink);
@@ -115,12 +133,18 @@ $colorNone        : lighten($colorSilver, 10%);
   margin: 0 auto;
   border: 1px solid $colorNone;
   table-layout: fixed;
+  &--flex {
+    table-layout: auto;
+  }
   th {
     &.time {
       background-color: $colorHead;
       border-bottom: 2px solid $colorHeadLighten;
       text-align: center;
       color: #ffffff;
+      &--day2 {
+        width: 20%;
+      }
     }
     &.floor {
       padding: 0.3rem;
@@ -209,6 +233,12 @@ $colorNone        : lighten($colorSilver, 10%);
       &--06 {
         background-color: $color06;
       }
+      &--content {
+        width: 80%;
+        text-align: center;
+        color: $colorHead;
+        border: none;
+      }
     }
   }
 }
@@ -223,6 +253,16 @@ $colorNone        : lighten($colorSilver, 10%);
       &.floor,
       &.room {
         display: none;
+      }
+      &.room--day2 {
+        display: block;
+      }
+      &.time--day2 {
+        display: block;
+        width: 100%;
+        background-color: lighten($colorHead, 50%);
+        border-bottom: none;
+        color: $colorHead;
       }
     }
     td {
@@ -277,6 +317,11 @@ $colorNone        : lighten($colorSilver, 10%);
             content: "3F Room6";
             color: darken($color06, 58%);
           }
+        }
+        &--content {
+          display: block;
+          width: 100%;
+          background-color: #ffffff;
         }
       }
     }

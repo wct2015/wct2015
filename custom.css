@@ -3899,6 +3899,14 @@ object {
     height: auto;
   }
 }
+/* WordPress markup */
+.speaker-sessions,
+#speaker-session-names,
+.session-speakers,
+#session-speaker-names {
+  display: none;
+}
+
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -3961,7 +3969,7 @@ The `sprites` mixin generates identical output to the CSS template
 .entry-content #tix-attendees .tix-columns-3 li {
   width: 100%;
   height: 90px;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid #ececec;
   margin-left: 0;
   list-style-type: none;
 }
@@ -4415,7 +4423,7 @@ body.error404 #primary:after {
 .hentry, body.error404 .not-found {
   margin-bottom: 40px;
   background-color: #ffffff;
-  border: 1px solid #ededed;
+  border: 1px solid #ececec;
   border-top: 2px solid #0b346e;
   border-bottom: 6px solid #0b346e;
 }
@@ -4569,8 +4577,8 @@ footer.entry-meta a:hover {
 /* page-links */
 .page-links {
   padding: 10px;
-  border-top: 1px solid #ededed;
-  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .page-links a {
   margin: 0 10px;
@@ -4640,7 +4648,7 @@ footer.entry-meta a:hover {
   border-right: none;
 }
 .adventCalendar td {
-  background-color: #fffae6;
+  background-color: #fffae5;
   border: 2px solid #ffffff;
 }
 .adventCalendar td.none {
@@ -4726,7 +4734,7 @@ footer.entry-meta a:hover {
 #primary-sidebar {
   padding: 0 10px;
   background-color: #ffffff;
-  border: 1px solid #ededed;
+  border: 1px solid #ececec;
 }
 #primary-sidebar .widget {
   padding: 20px 0;
@@ -4749,7 +4757,7 @@ footer.entry-meta a:hover {
   margin-bottom: 0;
 }
 #primary-sidebar .widget ul li {
-  border-bottom: 1px dotted #ededed;
+  border-bottom: 1px dotted #ececec;
 }
 #primary-sidebar .widget ul li a {
   display: block;
@@ -5343,7 +5351,7 @@ footer.entry-meta a:hover {
 .timetable {
   width: 100%;
   margin: 0 auto;
-  border: 1px solid #ededed;
+  border: 1px solid #ececec;
   table-layout: fixed;
 }
 .timetable--flex {
@@ -5427,7 +5435,7 @@ footer.entry-meta a:hover {
   background-color: #ffffff;
 }
 .timetable td.cell--none {
-  background-color: #ededed;
+  background-color: #ececec;
 }
 .timetable td.cell--hall {
   background-color: #c9d9f4;

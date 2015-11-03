@@ -5527,3 +5527,20 @@ footer.entry-meta a:hover {
     background-color: #ffffff;
   }
 }
+/* layout
+/* ---------------------------------------- */
+.page-id-2416 #secondary,
+.page-id-2491 #secondary,
+.page-id-4003 #secondary {
+  display: none;
+}
+.page-id-2416 #main,
+.page-id-2416 #primary,
+.page-id-2491 #main,
+.page-id-2491 #primary,
+.page-id-4003 #main,
+.page-id-4003 #primary {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}

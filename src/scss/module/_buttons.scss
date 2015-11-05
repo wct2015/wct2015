@@ -46,25 +46,6 @@ html {
       }
     }
   }
-  .btnGroup {
-    margin: 20px 0;
-    margin-left: 0;
-    &__btn {
-      @include buttonBase($colorOrange, rem-calc(14), true);
-      margin-bottom: 0;
-      font-size: rem-calc(16);
-      &--disabled {
-        @include buttonBase($colorSilver, rem-calc(14), true);
-        &:hover {
-          background-color: $colorSilver;
-        }
-      }
-    }
-    > li {
-      margin-left: 0;
-      list-style-type: none;
-    }
-  }
 }
 /* register */
 .btnRegister {
@@ -105,24 +86,5 @@ html {
 @media #{$small-only} {
   a.btnRegister {
     font-size: rem-calc(14);
-  }
-}
-@media #{$medium-up} {
-  .entry-content {
-    .btnGroup {
-      @include button-group-container();
-      margin: 30px 0;
-      > li {
-        @include button-group-style(
-          $even: 2,
-          $float: left
-        );
-        list-style-type: none;
-        border-right: 2px solid $colorWhite;
-        &:last-child {
-          border-right: none;
-        }
-      }
-    }
   }
 }

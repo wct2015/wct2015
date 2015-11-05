@@ -16,7 +16,10 @@
 @import 'core/foundation';
 
 // module
-@import 'module/**/*.*';
+@import 'module/*.*';
 
 // layout
 @import 'layout/*.*';
+
+// style
+@import 'style/*.*';

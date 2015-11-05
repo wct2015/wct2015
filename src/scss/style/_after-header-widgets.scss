@@ -133,18 +133,6 @@ $iconLarge: 80px;
       font-size: $iconLarge;
     }
     &__columns {
-      &--two {
-        @include grid-column(
-          $columns: 2,
-          $collapse: true
-        );
-      }
-      &--three {
-        @include grid-column(
-          $columns: 4,
-          $collapse: true
-        );
-      }
       &--four {
         @include grid-column(
           $columns: 6,

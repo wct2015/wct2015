@@ -89,6 +89,7 @@
   }
 }
 .entry-content {
+  @extend %clearfix;
   padding: 0 10px;
 }
 footer.entry-meta {

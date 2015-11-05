@@ -7,7 +7,7 @@ WordPress development for WordCamp Tokyo 2015 using:
 
 - gulp
 - BrowserSync
-- foundation
+- Foundation
 
 ## For Contribute
 
@@ -19,9 +19,7 @@ To begin with, check our [Wiki](https://github.com/featherplain/wct2015/wiki).
 - Bower
 - Node.js
 - npm
-- Ruby
 - Sass >= 3.4
-- sass-globbing
 
 ## Getting Started
 
@@ -36,11 +34,6 @@ To begin with, check our [Wiki](https://github.com/featherplain/wct2015/wiki).
 
 
         $ npm install
-
-1. Initialize `bower_components`.
-
-
-        $ npm run gulp-init
         
 1. Run gulp.
 
@@ -75,6 +68,7 @@ gulp.task('bs-reload', function() {
 ### foundation
 
 ```
+src/scss/core/foundation/
 src/scss/core/_settings.scss
 src/scss/core/_foundation.scss
 ```

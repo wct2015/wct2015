@@ -1,6 +1,6 @@
-/***************************************************************************
-* DEPENDENCIES
-***************************************************************************/
+/*------------------------------------------------------------------------------*/
+/* Dependencies
+/*------------------------------------------------------------------------------*/
 
 var gulp           = require('gulp'),
     $              = require('gulp-load-plugins')({ pattern: ['gulp-*', 'gulp.*'], replaceString: /\bgulp[\-.]/}),
@@ -9,9 +9,9 @@ var gulp           = require('gulp'),
     runSequence    = require('run-sequence')
 ;
 
-/***************************************************************************
-* FILE DESTINATIONS
-***************************************************************************/
+/*------------------------------------------------------------------------------*/
+/* File Destinations
+/*------------------------------------------------------------------------------*/
 
 var paths = {
   'root'           : './',
@@ -30,16 +30,14 @@ var paths = {
   'cssDest'        : './'
 };
 
-var rubySassConf = {
-  loadPath       : ['bower_components/foundation/scss'],
-  require        : 'sass-globbing',
-  sourcemap      : false,
-  style          : 'expanded'
+var gulpSassConf = {
+  includePaths   : [],
+  outputStyle    : 'expanded'
 };
 
-/***************************************************************************
- * initializing bower_components
-**************************************************************************/
+/*------------------------------------------------------------------------------*/
+/* Initializing bower_components
+/*------------------------------------------------------------------------------*/
 
 gulp.task('bower:install', $.shell.task(['bower install']));
 
@@ -48,9 +46,9 @@ gulp.task('install:foundation', function() {
     .pipe($.shell(['bash src/shell/foundation.sh']));
 });
 
-/***************************************************************************
-* BrowserSync
-***************************************************************************/
+/*------------------------------------------------------------------------------*/
+/* BrowserSync
+/*------------------------------------------------------------------------------*/
 
 gulp.task('browser-sync', function() {
   var args = {};
@@ -68,9 +66,9 @@ gulp.task('bs-reload', function() {
   browserSync.reload()
 });
 
-/***************************************************************************
-* image tasks
-***************************************************************************/
+/*------------------------------------------------------------------------------*/
+/* Image tasks
+/*------------------------------------------------------------------------------*/
 
 gulp.task('image-min', function() {
   return gulp.src(paths.imageDest + '**/*.*')
@@ -106,9 +104,9 @@ gulp.task('image-min', function() {
 //     .pipe(gulp.dest(paths.imageDest));
 // });
 
-/*******************************************************************************
- * Jade Tasks
-*******************************************************************************/
+/*------------------------------------------------------------------------------*/
+/* Jade Tasks
+/*------------------------------------------------------------------------------*/
 
 gulp.task('jade', function() {
   return gulp.src(paths.jadePath + '**/*.jade')
@@ -121,26 +119,31 @@ gulp.task('jade', function() {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-/***************************************************************************
-* Sass tasks
-***************************************************************************/
+/*------------------------------------------------------------------------------*/
+/* Sass tasks
+/*------------------------------------------------------------------------------*/
 
 gulp.task('sass', function () {
-  return $.rubySass(paths.scssPath, rubySassConf)
-    .on('error', function(err) { console.error('Error!', err.message); })
+  return gulp.src(paths.scssPath + '*.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.cssGlobbing({ extensions: ['.scss'] }))
+    .pipe($.sass(gulpSassConf).on('error', $.sass.logError))
     .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'ie 10', 'ie 9'],
+      browsers: ['last 2 versions'],
       cascade: false
     }))
-    // .pipe($.csso())
+    .pipe($.sourcemaps.write('maps', {
+      includeContent: false,
+      sourceRoot: paths.scssPath
+    }))
     .pipe(gulp.dest(paths.cssDest))
-    .pipe($.filter('**/*.css'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
-/***************************************************************************
-* gulp tasks
-***************************************************************************/
+
+/*------------------------------------------------------------------------------*/
+/* Gulp tasks
+/*------------------------------------------------------------------------------*/
 
 gulp.task('watch', function() {
   // gulp.watch([paths.imageDest + 'sprite/*.png'], ['sprite']);

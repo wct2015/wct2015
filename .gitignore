@@ -16,8 +16,8 @@
 *.out
 *.pid
 *.gz
- 
- 
+
+
 # OS or Editor folders
 .DS_Store
 ._*
@@ -31,7 +31,7 @@ nbproject
 .sublime-project
 .sublime-workspace
 .csscomb.json
- 
+
 # Folders to ignore
 .hg
 .svn
@@ -48,3 +48,4 @@ pids
 logs
 results
 build
+maps
